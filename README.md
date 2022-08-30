@@ -55,7 +55,7 @@ well known in the Linux community.)
 -------------------------------------------------------------------------------
 ### Who is the secondary contact for security updates, etc.?
 -------------------------------------------------------------------------------
-- Name:Justine Bagby
+- Name:Justin Bagby
 - Position:Director - Sales 
 - Email address:Justinb@amzetta.com
 - PGP key fingerprint:52D3D8F74C848F3A PGP Key Fingerprint: 87F2 B43A F046 F217 11CB 22AA 52D3 D8F7 4C84 8F3A, HKP key server: https://keyserver.ubuntu.com
