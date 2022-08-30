@@ -155,7 +155,7 @@ Ubuntu 18.04 or above with Docker, run make-shim.sh
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 
 -------------------------------------------------------------------------------
-This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
+https://github.com/amzdev0401/shim-review-15.6/blob/AmZetta-shim-x86_64-20220803/build.log
 
 -------------------------------------------------------------------------------
 ### What changes were made since your SHIM was last signed?
