@@ -17,18 +17,18 @@ COPY shimx64.efi /opt/shim/
 WORKDIR /opt/shim
 
 #  Find sha256 sum hexdump
-RUN sha256sum shimx64.efi > shim_orig_hash
-RUN hexdump -Cv shimx64.efi > shim_orig_dump
+RUN sha256sum shimx64.efi > original_shim_hash
+RUN hexdump -Cv shimx64.efi > original_shim_hexdump
 RUN cp shimx64.efi shimx64.efi.orig
 
 # Build the  Amzetta SHIM from scratch
 RUN make VENDOR_CERT_FILE=amzetta.der 
 RUN objdump -s -j .sbat shimx64.efi
-RUN sha256sum shimx64.efi > shim_built_hash
-RUN hexdump -Cv shimx64.efi > shim_built_dump
-RUN cat shim_built_hash
-RUN cat shim_orig_hash
+RUN sha256sum shimx64.efi > builded_shim_hash
+RUN hexdump -Cv shimx64.efi > builded_shim_hexdump
+RUN cat builded_shim_hash
+RUN cat original_shim_hash
 
 # Compare SHIM
-RUN diff shim_built_hash shim_orig_hash
-RUN diff shim_built_dump shim_orig_dump
+RUN diff builded_shim_hash original_shim_hash
+RUN diff builded_shim_hexdump original_shim_hexdump
