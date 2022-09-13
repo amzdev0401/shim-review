@@ -20,7 +20,7 @@ Here's the template:
 -------------------------------------------------------------------------------
 ### What organization or people are asking to have this signed?
 -------------------------------------------------------------------------------
-AmZetta Technologies  
+AmZetta Technologies
 AmZetta Technologies is a software developer providing secure endpoint solutions for companies and organizations worldwide. https://amzetta.com/products/ztc/
 
 -------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ You will be asked to post the contents of these mails in your `shim-review` issu
 
 -------------------------------------------------------------------------------
 - Name:Loganathan Ranganathan
-- Position:Engineering Manager III 
+- Position:Engineering Manager III
 - Email address:loganathanr@amzetta.com
 - PGP key fingerprint:2A2CF3A69E739955 PGP Key Fingerprint: 1920 A439 96A8 431B 6113 E95A 2A2C F3A6 9E73 9955, HKP key server: https://keyserver.ubuntu.com
 - https://keyserver.ubuntu.com/pks/lookup?search=loganathanr%40amzetta.com&fingerprint=on&op=index
@@ -55,8 +55,8 @@ well known in the Linux community.)
 -------------------------------------------------------------------------------
 ### Who is the secondary contact for security updates, etc.?
 -------------------------------------------------------------------------------
-- Name:Justin Bagby
-- Position:Director - Sales 
+- Name:Justin Bagby
+- Position:Director - Sales
 - Email address:Justinb@amzetta.com
 - PGP key fingerprint:52D3D8F74C848F3A PGP Key Fingerprint: 87F2 B43A F046 F217 11CB 22AA 52D3 D8F7 4C84 8F3A, HKP key server: https://keyserver.ubuntu.com
 - https://keyserver.ubuntu.com/pks/lookup?search=Justinb%40amzetta.com&fingerprint=on&op=index
@@ -67,7 +67,8 @@ well known in the Linux community.)
 
 -------------------------------------------------------------------------------
 ### Were these binaries created from the 15.6 shim release tar?
-Please create your shim binaries starting with the 15.6 shim release tar file: https://github.com/rhboot/shim/releases/download/15.6/shim-15.6.tar.bz2
+Please create your shim binaries starting with the 15.6 shim release tar file:
+https://github.com/rhboot/shim/releases/download/15.6/shim-15.6.tar.bz2
 
 This matches https://github.com/rhboot/shim/releases/tag/15.6 and contains the appropriate gnu-efi source.
 
@@ -79,6 +80,7 @@ No added patches.
 ### URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
 https://github.com/rhboot/shim.git, tag 15.6
+Original source code with only Amzetta Technologies certificate is embedded.
 
 -------------------------------------------------------------------------------
 ### What patches are being applied and why:
@@ -130,7 +132,7 @@ This is the first time SHIM submission, We are going to use GRUB 2.06 for upcomi
 -------------------------------------------------------------------------------
 1957a85b0032a81e6482ca4aab883643b8dae06e: Yes
 75b0cea7bf307f362057cc778efe89af4c615354: Yes
-eadb2f47a3ced5c64b23b90fd2a3463f63726066: No
+eadb2f47a3ced5c64b23b90fd2a3463f63726066: No  ( CONFIG_DEBUG_KERNEL flag is not enabled in our linux kernel )
 
 -------------------------------------------------------------------------------
 ### If you use vendor_db functionality of providing multiple certificates and/or hashes please briefly describe your certificate setup.
@@ -142,7 +144,7 @@ No, We don't use vendor_db functionality
 ### If you are re-using a previously used (CA) certificate, you will need to add the hashes of the previous GRUB2 binaries exposed to the CVEs to vendor_dbx in shim in order to prevent GRUB2 from being able to chainload those older GRUB2 binaries. If you are changing to a new (CA) certificate, this does not apply.
 ### Please describe your strategy.
 -------------------------------------------------------------------------------
-This is the first time SHIM submission, We are going to use GRUB 2.06 for upcoming product line.
+This is the first time SHIM submission, We are going to use GRUB2 2.06 for upcoming product line.
 
 -------------------------------------------------------------------------------
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -165,7 +167,7 @@ This is first time submission.
 -------------------------------------------------------------------------------
 ### What is the SHA256 hash of your final SHIM binary?
 -------------------------------------------------------------------------------
-542fc0eee529c01b65dbdaa279a4d829902a31eded463a898ce430306342ee2d  shimx64.efi
+a89ec6ed365f442e0761835fc0f736d4206b2bd5975209f8a5f23c35f361147c  shimx64.efi
 
 -------------------------------------------------------------------------------
 ### How do you manage and protect the keys used in your SHIM?
@@ -185,20 +187,20 @@ Yes
 -------------------------------------------------------------------------------
 SHIM:
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,1,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.amzetta,1,SnapOS,shim,15.6,https://amzetta.com
+shim,2,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.amzetta,2,AmZetta Technologies,shim,15.6,https://amzetta.com/
 
 GRUB:
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,1,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
-grub.amzetta,1,SnapOS,grub2,2.06,https://amzetta.com
+grub,2,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
+grub.amzetta,2,AmZetta Technologies,grub2,2.06-69edb312,https://amzetta.com/
 
 -------------------------------------------------------------------------------
 ### Which modules are built into your signed grub image?
 -------------------------------------------------------------------------------
    Original source code has been used without any modification, compiled with only vendor-specific SBAT entry.
-   https://ftp.gnu.org/gnu/grub/grub-2.06.tar.gz
-    
+   https://github.com/rhboot/grub2.git with commit id 69edb31205602c29293a8c6e67363bba2a4a1e66, dated 11 Auguest 2022.
+
 Modules in signed grub:
 all_video boot btrfs cat chain configfile echo efifwsetup efinet ext2 fat font gettext gfxmenu gfxterm gfxterm_background gzio halt hfsplus iso9660 jpeg keystatus loadenv linux lsefi lsefimmap  lssal lvm mdraid09  memdisk minicmd  normal part_apple part_msdos part_gpt password_pbkdf2  reboot search  search_fs_uuid search_fs_file search_label sleep test tftp video xzio lzopio gcry_dsa gcry_sha512 cmp eval true serial hashsum gcry_md5 gcry_rsa
 
@@ -207,12 +209,13 @@ all_video boot btrfs cat chain configfile echo efifwsetup efinet ext2 fat font g
 -------------------------------------------------------------------------------
 ### What is the origin and full version number of your bootloader (GRUB or other)?
 -------------------------------------------------------------------------------
-curl -O ftp.gnu.org/gnu/grub/grub-2.06.tar.gz
+GRUB2 git clone https://github.com/rhboot/grub2.git, commit 69edb31205602c29293a8c6e67363bba2a4a1e66 used, 11 Auguest 2022
+
 
 -------------------------------------------------------------------------------
 ### If your SHIM launches any other components, please provide further details on what is launched.
 -------------------------------------------------------------------------------
-SHIM only launches signed GRUB
+SHIM only launches signed GRUB2, then launches kernel
 
 -------------------------------------------------------------------------------
 ### If your GRUB2 launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
