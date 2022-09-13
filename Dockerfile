@@ -10,7 +10,7 @@ LABEL DESCRIPTION ="Docker Image To build Shim 15.06 for AmZetta Technologies."
 # Get source code from git and copy certificate and SBAT file
 WORKDIR /opt
 RUN git clone --recursive -b 15.6 https://github.com/rhboot/shim.git shim
-COPY sbat.csv /opt/shim/data
+COPY sbat.amzetta.csv /opt/shim/data
 COPY amzetta.der /opt/shim/
 COPY shimx64.efi /opt/shim/
 
@@ -22,7 +22,7 @@ RUN hexdump -Cv shimx64.efi > original_shim_hexdump
 RUN cp shimx64.efi shimx64.efi.orig
 
 # Build the  Amzetta SHIM from scratch
-RUN make VENDOR_CERT_FILE=amzetta.der 
+RUN make VENDOR_CERT_FILE=amzetta.der
 RUN objdump -s -j .sbat shimx64.efi
 RUN sha256sum shimx64.efi > builded_shim_hash
 RUN hexdump -Cv shimx64.efi > builded_shim_hexdump
