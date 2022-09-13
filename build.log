@@ -1,36 +1,36 @@
-Sending build context to Docker daemon  1.455MB
+Sending build context to Docker daemon  1.869MB
 Step 1/23 : FROM ubuntu:18.04
  ---> 8d5df41c547b
 Step 2/23 : LABEL MAINTAINER AmZetta Technologies <sales@amzetta.com>
- ---> Running in 9b012a3995a8
-Removing intermediate container 9b012a3995a8
- ---> 75752a3eaf1a
+ ---> Running in 050fbc847edf
+Removing intermediate container 050fbc847edf
+ ---> b26a9d69d6a4
 Step 3/23 : RUN apt-get update
- ---> Running in 0f5b9879e527
+ ---> Running in 159d1e8236d8
 Get:1 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
-Get:2 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
-Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
-Get:4 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
-Get:5 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
-Get:6 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
-Get:7 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [2938 kB]
-Get:8 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
-Get:9 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
-Get:10 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1536 kB]
-Get:11 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [22.8 kB]
-Get:12 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1100 kB]
-Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2313 kB]
-Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3369 kB]
-Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1141 kB]
-Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [29.9 kB]
-Get:17 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [12.9 kB]
-Get:18 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [12.2 kB]
-Fetched 25.9 MB in 10s (2688 kB/s)
+Get:2 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:5 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1131 kB]
+Get:7 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1540 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [22.8 kB]
+Get:9 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [2965 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1172 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3397 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [29.9 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2318 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [12.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [12.9 kB]
+Fetched 26.0 MB in 30s (874 kB/s)
 Reading package lists...
-Removing intermediate container 0f5b9879e527
- ---> 51ace5a9bfce
+Removing intermediate container 159d1e8236d8
+ ---> f20049a8aa1c
 Step 4/23 : RUN apt-get install -y build-essential git curl bsdmainutils wget dos2unix
- ---> Running in 668bb2058057
+ ---> Running in 3fe0e9e44f48
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -92,7 +92,7 @@ The following NEW packages will be installed:
   manpages-dev multiarch-support netbase openssh-client openssl patch perl
   perl-modules-5.26 pinentry-curses publicsuffix readline-common wget xauth
   xz-utils
-0 upgraded, 119 newly installed, 0 to remove and 2 not upgraded.
+0 upgraded, 119 newly installed, 0 to remove and 4 not upgraded.
 Need to get 67.0 MB of archives.
 After this operation, 282 MB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu bionic/main amd64 liblocale-gettext-perl amd64 1.07-3build2 [16.6 kB]
@@ -140,7 +140,7 @@ Get:42 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libbinutils am
 Get:43 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.30-21ubuntu1~18.04.7 [1839 kB]
 Get:44 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils amd64 2.30-21ubuntu1~18.04.7 [3388 B]
 Get:45 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc-dev-bin amd64 2.27-3ubuntu1.6 [71.9 kB]
-Get:46 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-libc-dev amd64 4.15.0-191.202 [984 kB]
+Get:46 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-libc-dev amd64 4.15.0-192.203 [985 kB]
 Get:47 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc6-dev amd64 2.27-3ubuntu1.6 [2587 kB]
 Get:48 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gcc-7-base amd64 7.5.0-3ubuntu1~18.04 [18.3 kB]
 Get:49 http://archive.ubuntu.com/ubuntu bionic/main amd64 libisl19 amd64 0.19-1 [551 kB]
@@ -185,8 +185,8 @@ Get:87 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-common
 Get:88 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-2.4-2 amd64 2.4.45+dfsg-1ubuntu1.11 [154 kB]
 Get:89 http://archive.ubuntu.com/ubuntu bionic/main amd64 libnghttp2-14 amd64 1.30.0-1ubuntu1 [77.8 kB]
 Get:90 http://archive.ubuntu.com/ubuntu bionic/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-1 [54.2 kB]
-Get:91 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl4 amd64 7.58.0-2ubuntu3.19 [220 kB]
-Get:92 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 curl amd64 7.58.0-2ubuntu3.19 [159 kB]
+Get:91 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl4 amd64 7.58.0-2ubuntu3.20 [220 kB]
+Get:92 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 curl amd64 7.58.0-2ubuntu3.20 [159 kB]
 Get:93 http://archive.ubuntu.com/ubuntu bionic/main amd64 libassuan0 amd64 2.5.1-2 [35.0 kB]
 Get:94 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gpgconf amd64 2.2.4-1ubuntu1.6 [124 kB]
 Get:95 http://archive.ubuntu.com/ubuntu bionic/main amd64 libksba8 amd64 1.3.5-2 [92.6 kB]
@@ -194,7 +194,7 @@ Get:96 http://archive.ubuntu.com/ubuntu bionic/main amd64 libnpth0 amd64 1.5-3 [
 Get:97 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 dirmngr amd64 2.2.4-1ubuntu1.6 [317 kB]
 Get:98 http://archive.ubuntu.com/ubuntu bionic/main amd64 libfakeroot amd64 1.22-2ubuntu1 [25.9 kB]
 Get:99 http://archive.ubuntu.com/ubuntu bionic/main amd64 fakeroot amd64 1.22-2ubuntu1 [62.3 kB]
-Get:100 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl3-gnutls amd64 7.58.0-2ubuntu3.19 [219 kB]
+Get:100 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl3-gnutls amd64 7.58.0-2ubuntu3.20 [219 kB]
 Get:101 http://archive.ubuntu.com/ubuntu bionic/main amd64 liberror-perl all 0.17025-1 [22.8 kB]
 Get:102 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 git-man all 1:2.17.1-1ubuntu0.12 [804 kB]
 Get:103 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 git amd64 1:2.17.1-1ubuntu0.12 [3930 kB]
@@ -214,10 +214,10 @@ Get:116 http://archive.ubuntu.com/ubuntu bionic/main amd64 libfile-fcntllock-per
 Get:117 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsasl2-modules amd64 2.1.27~101-g0780600+dfsg-3ubuntu2.4 [48.9 kB]
 Get:118 http://archive.ubuntu.com/ubuntu bionic/main amd64 manpages-dev all 4.15-1 [2217 kB]
 Get:119 http://archive.ubuntu.com/ubuntu bionic/universe amd64 dos2unix amd64 7.3.4-3 [351 kB]
-debconf: delaying package configuration, since apt-utils is not installed
-Fetched 67.0 MB in 27s (2470 kB/s)
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 67.0 MB in 17s (3841 kB/s)
 Selecting previously unselected package liblocale-gettext-perl.
-(Reading database ... 4051 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4051 files and directories currently installed.)
 Preparing to unpack .../0-liblocale-gettext-perl_1.07-3build2_amd64.deb ...
 Unpacking liblocale-gettext-perl (1.07-3build2) ...
 Selecting previously unselected package multiarch-support.
@@ -243,7 +243,7 @@ Preparing to unpack .../7-libx11-6_2%3a1.6.4-3ubuntu0.4_amd64.deb ...
 Unpacking libx11-6:amd64 (2:1.6.4-3ubuntu0.4) ...
 Setting up multiarch-support (2.27-3ubuntu1.6) ...
 Selecting previously unselected package libxext6:amd64.
-(Reading database ... 4355 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4355 files and directories currently installed.)
 Preparing to unpack .../000-libxext6_2%3a1.3.3-1_amd64.deb ...
 Unpacking libxext6:amd64 (2:1.3.3-1) ...
 Selecting previously unselected package perl-modules-5.26.
@@ -355,8 +355,8 @@ Selecting previously unselected package libc-dev-bin.
 Preparing to unpack .../036-libc-dev-bin_2.27-3ubuntu1.6_amd64.deb ...
 Unpacking libc-dev-bin (2.27-3ubuntu1.6) ...
 Selecting previously unselected package linux-libc-dev:amd64.
-Preparing to unpack .../037-linux-libc-dev_4.15.0-191.202_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (4.15.0-191.202) ...
+Preparing to unpack .../037-linux-libc-dev_4.15.0-192.203_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.15.0-192.203) ...
 Selecting previously unselected package libc6-dev:amd64.
 Preparing to unpack .../038-libc6-dev_2.27-3ubuntu1.6_amd64.deb ...
 Unpacking libc6-dev:amd64 (2.27-3ubuntu1.6) ...
@@ -490,11 +490,11 @@ Selecting previously unselected package librtmp1:amd64.
 Preparing to unpack .../081-librtmp1_2.4+20151223.gitfa8646d.1-1_amd64.deb ...
 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-1) ...
 Selecting previously unselected package libcurl4:amd64.
-Preparing to unpack .../082-libcurl4_7.58.0-2ubuntu3.19_amd64.deb ...
-Unpacking libcurl4:amd64 (7.58.0-2ubuntu3.19) ...
+Preparing to unpack .../082-libcurl4_7.58.0-2ubuntu3.20_amd64.deb ...
+Unpacking libcurl4:amd64 (7.58.0-2ubuntu3.20) ...
 Selecting previously unselected package curl.
-Preparing to unpack .../083-curl_7.58.0-2ubuntu3.19_amd64.deb ...
-Unpacking curl (7.58.0-2ubuntu3.19) ...
+Preparing to unpack .../083-curl_7.58.0-2ubuntu3.20_amd64.deb ...
+Unpacking curl (7.58.0-2ubuntu3.20) ...
 Selecting previously unselected package libassuan0:amd64.
 Preparing to unpack .../084-libassuan0_2.5.1-2_amd64.deb ...
 Unpacking libassuan0:amd64 (2.5.1-2) ...
@@ -517,8 +517,8 @@ Selecting previously unselected package fakeroot.
 Preparing to unpack .../090-fakeroot_1.22-2ubuntu1_amd64.deb ...
 Unpacking fakeroot (1.22-2ubuntu1) ...
 Selecting previously unselected package libcurl3-gnutls:amd64.
-Preparing to unpack .../091-libcurl3-gnutls_7.58.0-2ubuntu3.19_amd64.deb ...
-Unpacking libcurl3-gnutls:amd64 (7.58.0-2ubuntu3.19) ...
+Preparing to unpack .../091-libcurl3-gnutls_7.58.0-2ubuntu3.20_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.58.0-2ubuntu3.20) ...
 Selecting previously unselected package liberror-perl.
 Preparing to unpack .../092-liberror-perl_0.17025-1_all.deb ...
 Unpacking liberror-perl (0.17025-1) ...
@@ -601,7 +601,7 @@ Setting up libreadline7:amd64 (7.0-3) ...
 Setting up libpsl5:amd64 (0.19.1-5build1) ...
 Setting up libtsan0:amd64 (8.4.0-1ubuntu1~18.04) ...
 Setting up libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2.4) ...
-Setting up linux-libc-dev:amd64 (4.15.0-191.202) ...
+Setting up linux-libc-dev:amd64 (4.15.0-192.203) ...
 Setting up libmpfr6:amd64 (4.0.1-1) ...
 Setting up libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2.4) ...
 Setting up dos2unix (7.3.4-3) ...
@@ -728,11 +728,11 @@ update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mo
 update-alternatives: warning: skip creation of /usr/share/man/man1/c++.1.gz because associated file /usr/share/man/man1/g++.1.gz (of link group c++) doesn't exist
 Setting up dirmngr (2.2.4-1ubuntu1.6) ...
 Setting up build-essential (12.4ubuntu1) ...
-Setting up libcurl3-gnutls:amd64 (7.58.0-2ubuntu3.19) ...
-Setting up libcurl4:amd64 (7.58.0-2ubuntu3.19) ...
+Setting up libcurl3-gnutls:amd64 (7.58.0-2ubuntu3.20) ...
+Setting up libcurl4:amd64 (7.58.0-2ubuntu3.20) ...
 Setting up gpg-wks-client (2.2.4-1ubuntu1.6) ...
 Setting up git (1:2.17.1-1ubuntu0.12) ...
-Setting up curl (7.58.0-2ubuntu3.19) ...
+Setting up curl (7.58.0-2ubuntu3.20) ...
 Setting up gnupg (2.2.4-1ubuntu1.6) ...
 Processing triggers for libc-bin (2.27-3ubuntu1.6) ...
 Processing triggers for ca-certificates (20211016~18.04.1) ...
@@ -740,24 +740,24 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container 668bb2058057
- ---> 6677cf3b13e8
+Removing intermediate container 3fe0e9e44f48
+ ---> de4b8bb46f18
 Step 5/23 : LABEL VERSION ="1.0"
- ---> Running in b8425d8962f2
-Removing intermediate container b8425d8962f2
- ---> 8597e657a2f5
+ ---> Running in d2d686b5f336
+Removing intermediate container d2d686b5f336
+ ---> 224c3a3ebfb7
 Step 6/23 : LABEL DESCRIPTION ="Docker Image To build Shim 15.06 for AmZetta Technologies."
- ---> Running in da2ee6fd4d3f
-Removing intermediate container da2ee6fd4d3f
- ---> fab91a4658d2
+ ---> Running in c9ffbdf50e75
+Removing intermediate container c9ffbdf50e75
+ ---> ba861ef079f3
 Step 7/23 : WORKDIR /opt
- ---> Running in da3b97a193e5
-Removing intermediate container da3b97a193e5
- ---> 0a4dba8fce61
+ ---> Running in 505453f519bf
+Removing intermediate container 505453f519bf
+ ---> 16c3c5147e73
 Step 8/23 : RUN git clone --recursive -b 15.6 https://github.com/rhboot/shim.git shim
- ---> Running in 170a70ed222c
-Cloning into 'shim'...
-Note: checking out '505cdb678b319fcf9a7fdee77c0f091b4147cbe5'.
+ ---> Running in 228ebaed2e23
+[91mCloning into 'shim'...
+[0m[91mNote: checking out '505cdb678b319fcf9a7fdee77c0f091b4147cbe5'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -768,39 +768,39 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b <new-branch-name>
 
-Submodule 'gnu-efi' (https://github.com/rhboot/gnu-efi.git) registered for path 'gnu-efi'
-Cloning into '/opt/shim/gnu-efi'...
-Submodule path 'gnu-efi': checked out '03670e14f263ad571bf0f39dffa9b8d23535f4d3'
-Removing intermediate container 170a70ed222c
- ---> cfa2158584ce
+[0m[91mSubmodule 'gnu-efi' (https://github.com/rhboot/gnu-efi.git) registered for path 'gnu-efi'
+[0m[91mCloning into '/opt/shim/gnu-efi'...
+[0mSubmodule path 'gnu-efi': checked out '03670e14f263ad571bf0f39dffa9b8d23535f4d3'
+Removing intermediate container 228ebaed2e23
+ ---> 2e42d7fcdd08
 Step 9/23 : COPY sbat.csv /opt/shim/data
- ---> bc745c35a547
+ ---> 10d824334feb
 Step 10/23 : COPY amzetta.der /opt/shim/
- ---> a0a2d4e7216e
+ ---> 77f43b6d323a
 Step 11/23 : COPY shimx64.efi /opt/shim/
- ---> 9684b32ee5b9
+ ---> 635922aa8475
 Step 12/23 : WORKDIR /opt/shim
- ---> Running in 31ff1675d00b
-Removing intermediate container 31ff1675d00b
- ---> 51fffcb099b6
+ ---> Running in d82eab3bf76f
+Removing intermediate container d82eab3bf76f
+ ---> 984ded104118
 Step 13/23 : RUN sha256sum shimx64.efi > original_shim_hash
- ---> Running in 4976c60b02a8
-Removing intermediate container 4976c60b02a8
- ---> aeffccc442bc
+ ---> Running in 79d3306ff2e8
+Removing intermediate container 79d3306ff2e8
+ ---> 5fbe5459a6c2
 Step 14/23 : RUN hexdump -Cv shimx64.efi > original_shim_hexdump
- ---> Running in 151d4ddc80d3
-Removing intermediate container 151d4ddc80d3
- ---> da4c60cb3028
+ ---> Running in 91dbab0f3289
+Removing intermediate container 91dbab0f3289
+ ---> 9acbdc3d8600
 Step 15/23 : RUN cp shimx64.efi shimx64.efi.orig
- ---> Running in 7a0c9e616f2f
-Removing intermediate container 7a0c9e616f2f
- ---> ec21f7373d93
+ ---> Running in ff2943e42099
+Removing intermediate container ff2943e42099
+ ---> 5e40a252ece9
 Step 16/23 : RUN make VENDOR_CERT_FILE=amzetta.der
- ---> Running in fba158b734c2
-sed     -e "s,@@VERSION@@,15.6," \
-        -e "s,@@UNAME@@,Linux x86_64 x86_64 x86_64 GNU/Linux," \
-        -e "s,@@COMMIT@@,505cdb678b319fcf9a7fdee77c0f091b4147cbe5," \
-        < /opt/shim/version.c.in > version.c
+ ---> Running in 0a82f30e7c09
+sed	-e "s,@@VERSION@@,15.6," \
+	-e "s,@@UNAME@@,Linux x86_64 x86_64 x86_64 GNU/Linux," \
+	-e "s,@@COMMIT@@,505cdb678b319fcf9a7fdee77c0f091b4147cbe5," \
+	< /opt/shim/version.c.in > version.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o shim.o shim.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o globals.o globals.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o mok.o mok.c
@@ -813,8 +813,8 @@ gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -f
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o sbat.o sbat.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\" -x c -c -o sbat_data.o /dev/null
 objcopy --add-section .sbat=/opt/shim/data/sbat.csv \
-        --set-section-flags .sbat=contents,alloc,load,readonly,data \
-        sbat_data.o
+	--set-section-flags .sbat=contents,alloc,load,readonly,data \
+	sbat_data.o
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o pe.o pe.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o httpboot.o httpboot.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o csv.o csv.c
@@ -1259,7 +1259,7 @@ gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -f
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -nostdinc -m64 -mno-mmx -mno-sse -mno-red-zone -maccumulate-outgoing-args -Os -Wall -Wextra -Wno-missing-field-initializers -Wno-empty-body -Wno-implicit-fallthrough -Wno-old-style-declaration -Wno-unused-but-set-variable -Wno-unused-parameter -Werror -I/opt/shim/Cryptlib/OpenSSL -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/OpenSSL/Include/ -I/opt/shim/Cryptlib/OpenSSL/crypto -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/Cryptlib/OpenSSL/crypto/asn1 -I/opt/shim/Cryptlib/OpenSSL/crypto/evp -I/opt/shim/Cryptlib/OpenSSL/crypto/modes -I/opt/shim/Cryptlib/OpenSSL/crypto/include -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DL_ENDIAN -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -DOPENSSL_SMALL_FOOTPRINT -DPEDANTIC -DMDE_CPU_X64   -c -o crypto/cmac/cmac.o crypto/cmac/cmac.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -nostdinc -m64 -mno-mmx -mno-sse -mno-red-zone -maccumulate-outgoing-args -Os -Wall -Wextra -Wno-missing-field-initializers -Wno-empty-body -Wno-implicit-fallthrough -Wno-old-style-declaration -Wno-unused-but-set-variable -Wno-unused-parameter -Werror -I/opt/shim/Cryptlib/OpenSSL -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/OpenSSL/Include/ -I/opt/shim/Cryptlib/OpenSSL/crypto -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/Cryptlib/OpenSSL/crypto/asn1 -I/opt/shim/Cryptlib/OpenSSL/crypto/evp -I/opt/shim/Cryptlib/OpenSSL/crypto/modes -I/opt/shim/Cryptlib/OpenSSL/crypto/include -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DL_ENDIAN -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -DOPENSSL_SMALL_FOOTPRINT -DPEDANTIC -DMDE_CPU_X64   -c -o crypto/cmac/cm_ameth.o crypto/cmac/cm_ameth.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -nostdinc -m64 -mno-mmx -mno-sse -mno-red-zone -maccumulate-outgoing-args -Os -Wall -Wextra -Wno-missing-field-initializers -Wno-empty-body -Wno-implicit-fallthrough -Wno-old-style-declaration -Wno-unused-but-set-variable -Wno-unused-parameter -Werror -I/opt/shim/Cryptlib/OpenSSL -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/OpenSSL/Include/ -I/opt/shim/Cryptlib/OpenSSL/crypto -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/Cryptlib/OpenSSL/crypto/asn1 -I/opt/shim/Cryptlib/OpenSSL/crypto/evp -I/opt/shim/Cryptlib/OpenSSL/crypto/modes -I/opt/shim/Cryptlib/OpenSSL/crypto/include -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DL_ENDIAN -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -DOPENSSL_SMALL_FOOTPRINT -DPEDANTIC -DMDE_CPU_X64   -c -o crypto/cmac/cm_pmeth.o crypto/cmac/cm_pmeth.c
-ar rcs libopenssl.a crypto/cryptlib.o crypto/mem.o crypto/mem_clr.o crypto/mem_dbg.o crypto/cversion.o crypto/ex_data.o crypto/cpt_err.o crypto/ebcdic.o crypto/uid.o crypto/o_time.o crypto/o_str.o crypto/o_dir.o crypto/o_fips.o crypto/o_init.o crypto/fips_ers.o crypto/md5/md5_dgst.o crypto/md5/md5_one.o crypto/sha/sha_dgst.o crypto/sha/sha1dgst.o crypto/sha/sha_one.o crypto/sha/sha1_one.o crypto/sha/sha256.o crypto/sha/sha512.o crypto/hmac/hmac.o crypto/hmac/hm_ameth.o crypto/hmac/hm_pmeth.o crypto/rc4/rc4_enc.o crypto/rc4/rc4_skey.o crypto/rc4/rc4_utl.o crypto/aes/aes_misc.o crypto/aes/aes_ecb.o crypto/aes/aes_cfb.o crypto/aes/aes_ofb.o crypto/aes/aes_ctr.o crypto/aes/aes_ige.o crypto/aes/aes_wrap.o crypto/aes/aes_core.o crypto/aes/aes_cbc.o crypto/modes/cbc128.o crypto/modes/ctr128.o crypto/modes/cts128.o crypto/modes/cfb128.o crypto/modes/ofb128.o crypto/modes/gcm128.o crypto/modes/ccm128.o crypto/modes/xts128.o crypto/modes/wrap128.o crypto/bn/bn_add.o crypto/bn/bn_div.o crypto/bn/bn_exp.o crypto/bn/bn_lib.o crypto/bn/bn_ctx.o crypto/bn/bn_mul.o crypto/bn/bn_mod.o crypto/bn/bn_print.o crypto/bn/bn_rand.o crypto/bn/bn_shift.o crypto/bn/bn_word.o crypto/bn/bn_blind.o crypto/bn/bn_kron.o crypto/bn/bn_sqrt.o crypto/bn/bn_gcd.o crypto/bn/bn_prime.o crypto/bn/bn_err.o crypto/bn/bn_sqr.o crypto/bn/bn_asm.o crypto/bn/bn_recp.o crypto/bn/bn_mont.o crypto/bn/bn_mpi.o crypto/bn/bn_exp2.o crypto/bn/bn_gf2m.o crypto/bn/bn_nist.o crypto/bn/bn_depr.o crypto/bn/bn_x931p.o crypto/bn/bn_const.o crypto/rsa/rsa_eay.o crypto/rsa/rsa_gen.o crypto/rsa/rsa_lib.o crypto/rsa/rsa_sign.o crypto/rsa/rsa_saos.o crypto/rsa/rsa_err.o crypto/rsa/rsa_pk1.o crypto/rsa/rsa_ssl.o crypto/rsa/rsa_none.o crypto/rsa/rsa_oaep.o crypto/rsa/rsa_chk.o crypto/rsa/rsa_null.o crypto/rsa/rsa_pss.o crypto/rsa/rsa_x931.o crypto/rsa/rsa_asn1.o crypto/rsa/rsa_depr.o crypto/rsa/rsa_ameth.o crypto/rsa/rsa_prn.o crypto/rsa/rsa_pmeth.o crypto/rsa/rsa_crpt.o crypto/dso/dso_dl.o crypto/dso/dso_dlfcn.o crypto/dso/dso_err.o crypto/dso/dso_lib.o crypto/dso/dso_null.o crypto/dso/dso_openssl.o crypto/dso/dso_win32.o crypto/dso/dso_vms.o crypto/dso/dso_beos.o crypto/dh/dh_asn1.o crypto/dh/dh_gen.o crypto/dh/dh_key.o crypto/dh/dh_lib.o crypto/dh/dh_check.o crypto/dh/dh_err.o crypto/dh/dh_depr.o crypto/dh/dh_ameth.o crypto/dh/dh_pmeth.o crypto/dh/dh_prn.o crypto/dh/dh_rfc5114.o crypto/buffer/buffer.o crypto/buffer/buf_str.o crypto/buffer/buf_err.o crypto/bio/bio_lib.o crypto/bio/bio_cb.o crypto/bio/bio_err.o crypto/bio/bss_mem.o crypto/bio/bss_null.o crypto/bio/bss_fd.o crypto/bio/bss_file.o crypto/bio/bss_sock.o crypto/bio/bss_conn.o crypto/bio/bf_null.o crypto/bio/bf_buff.o crypto/bio/b_dump.o crypto/bio/b_print.o crypto/bio/b_sock.o crypto/bio/bss_acpt.o crypto/bio/bf_nbio.o crypto/bio/bss_log.o crypto/bio/bss_bio.o crypto/bio/bss_dgram.o crypto/stack/stack.o crypto/lhash/lhash.o crypto/lhash/lh_stats.o crypto/rand/md_rand.o crypto/rand/randfile.o crypto/rand/rand_lib.o crypto/rand/rand_err.o crypto/rand/rand_unix.o crypto/err/err.o crypto/err/err_all.o crypto/err/err_prn.o crypto/objects/o_names.o crypto/objects/obj_dat.o crypto/objects/obj_lib.o crypto/objects/obj_err.o crypto/objects/obj_xref.o crypto/evp/encode.o crypto/evp/digest.o crypto/evp/evp_enc.o crypto/evp/evp_key.o crypto/evp/evp_acnf.o crypto/evp/evp_cnf.o crypto/evp/e_des.o crypto/evp/e_bf.o crypto/evp/e_idea.o crypto/evp/e_des3.o crypto/evp/e_camellia.o crypto/evp/e_rc4.o crypto/evp/e_aes.o crypto/evp/names.o crypto/evp/e_seed.o crypto/evp/e_xcbc_d.o crypto/evp/e_rc2.o crypto/evp/e_cast.o crypto/evp/e_rc5.o crypto/evp/m_null.o crypto/evp/m_md2.o crypto/evp/m_md4.o crypto/evp/m_md5.o crypto/evp/m_sha.o crypto/evp/m_sha1.o crypto/evp/m_wp.o crypto/evp/m_dss.o crypto/evp/m_dss1.o crypto/evp/m_mdc2.o crypto/evp/m_ripemd.o crypto/evp/m_ecdsa.o crypto/evp/p_open.o crypto/evp/p_seal.o crypto/evp/p_sign.o crypto/evp/p_verify.o crypto/evp/p_lib.o crypto/evp/p_enc.o crypto/evp/p_dec.o crypto/evp/bio_md.o crypto/evp/bio_b64.o crypto/evp/bio_enc.o crypto/evp/evp_err.o crypto/evp/e_null.o crypto/evp/c_all.o crypto/evp/c_allc.o crypto/evp/c_alld.o crypto/evp/evp_lib.o crypto/evp/bio_ok.o crypto/evp/evp_pkey.o crypto/evp/evp_pbe.o crypto/evp/p5_crpt.o crypto/evp/p5_crpt2.o crypto/evp/e_old.o crypto/evp/pmeth_lib.o crypto/evp/pmeth_fn.o crypto/evp/pmeth_gn.o crypto/evp/m_sigver.o crypto/evp/e_aes_cbc_hmac_sha1.o crypto/evp/e_aes_cbc_hmac_sha256.o crypto/evp/e_rc4_hmac_md5.o crypto/asn1/a_object.o crypto/asn1/a_bitstr.o crypto/asn1/a_utctm.o crypto/asn1/a_gentm.o crypto/asn1/a_time.o crypto/asn1/a_int.o crypto/asn1/a_octet.o crypto/asn1/a_print.o crypto/asn1/a_type.o crypto/asn1/a_set.o crypto/asn1/a_dup.o crypto/asn1/a_d2i_fp.o crypto/asn1/a_i2d_fp.o crypto/asn1/a_enum.o crypto/asn1/a_utf8.o crypto/asn1/a_sign.o crypto/asn1/a_digest.o crypto/asn1/a_verify.o crypto/asn1/a_mbstr.o crypto/asn1/a_strex.o crypto/asn1/x_algor.o crypto/asn1/x_val.o crypto/asn1/x_pubkey.o crypto/asn1/x_sig.o crypto/asn1/x_req.o crypto/asn1/x_attrib.o crypto/asn1/x_bignum.o crypto/asn1/x_long.o crypto/asn1/x_name.o crypto/asn1/x_x509.o crypto/asn1/x_x509a.o crypto/asn1/x_crl.o crypto/asn1/x_info.o crypto/asn1/x_spki.o crypto/asn1/nsseq.o crypto/asn1/x_nx509.o crypto/asn1/d2i_pu.o crypto/asn1/d2i_pr.o crypto/asn1/i2d_pu.o crypto/asn1/i2d_pr.o crypto/asn1/t_req.o crypto/asn1/t_x509.o crypto/asn1/t_x509a.o crypto/asn1/t_crl.o crypto/asn1/t_pkey.o crypto/asn1/t_spki.o crypto/asn1/t_bitst.o crypto/asn1/tasn_new.o crypto/asn1/tasn_fre.o crypto/asn1/tasn_enc.o crypto/asn1/tasn_dec.o crypto/asn1/tasn_utl.o crypto/asn1/tasn_typ.o crypto/asn1/tasn_prn.o crypto/asn1/ameth_lib.o crypto/asn1/f_int.o crypto/asn1/f_string.o crypto/asn1/n_pkey.o crypto/asn1/f_enum.o crypto/asn1/x_pkey.o crypto/asn1/a_bool.o crypto/asn1/x_exten.o crypto/asn1/bio_asn1.o crypto/asn1/bio_ndef.o crypto/asn1/asn_mime.o crypto/asn1/asn1_gen.o crypto/asn1/asn1_par.o crypto/asn1/asn1_lib.o crypto/asn1/asn1_err.o crypto/asn1/a_bytes.o crypto/asn1/a_strnid.o crypto/asn1/evp_asn1.o crypto/asn1/asn_pack.o crypto/asn1/p5_pbe.o crypto/asn1/p5_pbev2.o crypto/asn1/p8_pkey.o crypto/asn1/asn_moid.o crypto/pem/pem_sign.o crypto/pem/pem_seal.o crypto/pem/pem_info.o crypto/pem/pem_lib.o crypto/pem/pem_all.o crypto/pem/pem_err.o crypto/pem/pem_x509.o crypto/pem/pem_xaux.o crypto/pem/pem_oth.o crypto/pem/pem_pk8.o crypto/pem/pem_pkey.o crypto/pem/pvkfmt.o crypto/x509/x509_def.o crypto/x509/x509_d2.o crypto/x509/x509_r2x.o crypto/x509/x509_cmp.o crypto/x509/x509_obj.o crypto/x509/x509_req.o crypto/x509/x509spki.o crypto/x509/x509_vfy.o crypto/x509/x509_set.o crypto/x509/x509cset.o crypto/x509/x509rset.o crypto/x509/x509_err.o crypto/x509/x509name.o crypto/x509/x509_v3.o crypto/x509/x509_ext.o crypto/x509/x509_att.o crypto/x509/x509type.o crypto/x509/x509_lu.o crypto/x509/x_all.o crypto/x509/x509_txt.o crypto/x509/x509_trs.o crypto/x509/x509_vpm.o crypto/x509v3/v3_bcons.o crypto/x509v3/v3_bitst.o crypto/x509v3/v3_conf.o crypto/x509v3/v3_extku.o crypto/x509v3/v3_ia5.o crypto/x509v3/v3_lib.o crypto/x509v3/v3_prn.o crypto/x509v3/v3_utl.o crypto/x509v3/v3err.o crypto/x509v3/v3_genn.o crypto/x509v3/v3_alt.o crypto/x509v3/v3_skey.o crypto/x509v3/v3_akey.o crypto/x509v3/v3_pku.o crypto/x509v3/v3_int.o crypto/x509v3/v3_enum.o crypto/x509v3/v3_sxnet.o crypto/x509v3/v3_cpols.o crypto/x509v3/v3_crld.o crypto/x509v3/v3_purp.o crypto/x509v3/v3_info.o crypto/x509v3/v3_ocsp.o crypto/x509v3/v3_akeya.o crypto/x509v3/v3_pmaps.o crypto/x509v3/v3_pcons.o crypto/x509v3/v3_ncons.o crypto/x509v3/v3_pcia.o crypto/x509v3/v3_pci.o crypto/x509v3/pcy_cache.o crypto/x509v3/pcy_node.o crypto/x509v3/pcy_data.o crypto/x509v3/pcy_map.o crypto/x509v3/pcy_tree.o crypto/x509v3/pcy_lib.o crypto/x509v3/v3_asid.o crypto/x509v3/v3_addr.o crypto/conf/conf_err.o crypto/conf/conf_lib.o crypto/conf/conf_api.o crypto/conf/conf_def.o crypto/conf/conf_mod.o crypto/conf/conf_mall.o crypto/conf/conf_sap.o crypto/txt_db/txt_db.o crypto/pkcs7/pk7_asn1.o crypto/pkcs7/pk7_lib.o crypto/pkcs7/pkcs7err.o crypto/pkcs7/pk7_doit.o crypto/pkcs7/pk7_smime.o crypto/pkcs7/pk7_attr.o crypto/pkcs7/pk7_mime.o crypto/pkcs7/bio_pk7.o crypto/pkcs12/p12_add.o crypto/pkcs12/p12_asn.o crypto/pkcs12/p12_attr.o crypto/pkcs12/p12_crpt.o crypto/pkcs12/p12_crt.o crypto/pkcs12/p12_decr.o crypto/pkcs12/p12_init.o crypto/pkcs12/p12_key.o crypto/pkcs12/p12_kiss.o crypto/pkcs12/p12_mutl.o crypto/pkcs12/p12_utl.o crypto/pkcs12/p12_npas.o crypto/pkcs12/pk12err.o crypto/pkcs12/p12_p8d.o crypto/pkcs12/p12_p8e.o crypto/comp/comp_lib.o crypto/comp/comp_err.o crypto/comp/c_rle.o crypto/comp/c_zlib.o crypto/ocsp/ocsp_asn.o crypto/ocsp/ocsp_ext.o crypto/ocsp/ocsp_ht.o crypto/ocsp/ocsp_lib.o crypto/ocsp/ocsp_cl.o crypto/ocsp/ocsp_srv.o crypto/ocsp/ocsp_prn.o crypto/ocsp/ocsp_vfy.o crypto/ocsp/ocsp_err.o crypto/cmac/cmac.o crypto/cmac/cm_ameth.o crypto/cmac/cm_pmeth.o
+ar rcs libopenssl.a crypto/cryptlib.o crypto/mem.o crypto/mem_clr.o crypto/mem_dbg.o crypto/cversion.o crypto/ex_data.o crypto/cpt_err.o crypto/ebcdic.o crypto/uid.o crypto/o_time.o crypto/o_str.o crypto/o_dir.o crypto/o_fips.o crypto/o_init.o crypto/fips_ers.o crypto/md5/md5_dgst.o crypto/md5/md5_one.o crypto/sha/sha_dgst.o crypto/sha/sha1dgst.o crypto/sha/sha_one.o crypto/sha/sha1_one.o crypto/sha/sha256.o crypto/sha/sha512.o crypto/hmac/hmac.o crypto/hmac/hm_ameth.o crypto/hmac/hm_pmeth.o crypto/rc4/rc4_enc.o crypto/rc4/rc4_skey.o crypto/rc4/rc4_utl.o crypto/aes/aes_misc.o crypto/aes/aes_ecb.o crypto/aes/aes_cfb.o crypto/aes/aes_ofb.o crypto/aes/aes_ctr.o crypto/aes/aes_ige.o crypto/aes/aes_wrap.o crypto/aes/aes_core.o crypto/aes/aes_cbc.o crypto/modes/cbc128.o crypto/modes/ctr128.o crypto/modes/cts128.o crypto/modes/cfb128.o crypto/modes/ofb128.o crypto/modes/gcm128.o crypto/modes/ccm128.o crypto/modes/xts128.o crypto/modes/wrap128.o crypto/bn/bn_add.o crypto/bn/bn_div.o crypto/bn/bn_exp.o crypto/bn/bn_lib.o crypto/bn/bn_ctx.o crypto/bn/bn_mul.o crypto/bn/bn_mod.o crypto/bn/bn_print.o crypto/bn/bn_rand.o crypto/bn/bn_shift.o crypto/bn/bn_word.o crypto/bn/bn_blind.o crypto/bn/bn_kron.o crypto/bn/bn_sqrt.o crypto/bn/bn_gcd.o crypto/bn/bn_prime.o crypto/bn/bn_err.o crypto/bn/bn_sqr.o crypto/bn/bn_asm.o crypto/bn/bn_recp.o crypto/bn/bn_mont.o crypto/bn/bn_mpi.o crypto/bn/bn_exp2.o crypto/bn/bn_gf2m.o crypto/bn/bn_nist.o crypto/bn/bn_depr.o crypto/bn/bn_x931p.o crypto/bn/bn_const.o crypto/rsa/rsa_eay.o crypto/rsa/rsa_gen.o crypto/rsa/rsa_lib.o crypto/rsa/rsa_sign.o crypto/rsa/rsa_saos.o crypto/rsa/rsa_err.o crypto/rsa/rsa_pk1.o crypto/rsa/rsa_ssl.o crypto/rsa/rsa_none.o crypto/rsa/rsa_oaep.o crypto/rsa/rsa_chk.o crypto/rsa/rsa_null.o crypto/rsa/rsa_pss.o crypto/rsa/rsa_x931.o crypto/rsa/rsa_asn1.o crypto/rsa/rsa_depr.o crypto/rsa/rsa_ameth.o crypto/rsa/rsa_prn.o crypto/rsa/rsa_pmeth.o crypto/rsa/rsa_crpt.o crypto/dso/dso_dl.o crypto/dso/dso_dlfcn.o crypto/dso/dso_err.o crypto/dso/dso_lib.o crypto/dso/dso_null.o crypto/dso/dso_openssl.o crypto/dso/dso_win32.o crypto/dso/dso_vms.o crypto/dso/dso_beos.o crypto/dh/dh_asn1.o crypto/dh/dh_gen.o crypto/dh/dh_key.o crypto/dh/dh_lib.o crypto/dh/dh_check.o crypto/dh/dh_err.o crypto/dh/dh_depr.o crypto/dh/dh_ameth.o crypto/dh/dh_pmeth.o crypto/dh/dh_prn.o crypto/dh/dh_rfc5114.o crypto/buffer/buffer.o crypto/buffer/buf_str.o crypto/buffer/buf_err.o crypto/bio/bio_lib.o crypto/bio/bio_cb.o crypto/bio/bio_err.o crypto/bio/bss_mem.o crypto/bio/bss_null.o crypto/bio/bss_fd.o crypto/bio/bss_file.o crypto/bio/bss_sock.o crypto/bio/bss_conn.o crypto/bio/bf_null.o crypto/bio/bf_buff.o crypto/bio/b_dump.o crypto/bio/b_print.o crypto/bio/b_sock.o crypto/bio/bss_acpt.o crypto/bio/bf_nbio.o crypto/bio/bss_log.o crypto/bio/bss_bio.o crypto/bio/bss_dgram.o crypto/stack/stack.o crypto/lhash/lhash.o crypto/lhash/lh_stats.o crypto/rand/md_rand.o crypto/rand/randfile.o crypto/rand/rand_lib.o crypto/rand/rand_err.o crypto/rand/rand_unix.o crypto/err/err.o crypto/err/err_all.o crypto/err/err_prn.o crypto/objects/o_names.o crypto/objects/obj_dat.o crypto/objects/obj_lib.o crypto/objects/obj_err.o crypto/objects/obj_xref.o crypto/evp/encode.o crypto/evp/digest.o crypto/evp/evp_enc.o crypto/evp/evp_key.o crypto/evp/evp_acnf.o crypto/evp/evp_cnf.o crypto/evp/e_des.o crypto/evp/e_bf.o crypto/evp/e_idea.o crypto/evp/e_des3.o crypto/evp/e_camellia.o crypto/evp/e_rc4.o crypto/evp/e_aes.o crypto/evp/names.o crypto/evp/e_seed.o crypto/evp/e_xcbc_d.o crypto/evp/e_rc2.o crypto/evp/e_cast.o crypto/evp/e_rc5.o crypto/evp/m_null.o crypto/evp/m_md2.o crypto/evp/m_md4.o crypto/evp/m_md5.o crypto/evp/m_sha.o crypto/evp/m_sha1.o crypto/evp/m_wp.o crypto/evp/m_dss.o crypto/evp/m_dss1.o crypto/evp/m_mdc2.o crypto/evp/m_ripemd.o crypto/evp/m_ecdsa.o crypto/evp/p_open.o crypto/evp/p_seal.o crypto/evp/p_sign.o crypto/evp/p_verify.o crypto/evp/p_lib.o crypto/evp/p_enc.o crypto/evp/p_dec.o crypto/evp/bio_md.o crypto/evp/bio_b64.o crypto/evp/bio_enc.o crypto/evp/evp_err.o crypto/evp/e_null.o crypto/evp/c_all.o crypto/evp/c_allc.o crypto/evp/c_alld.o crypto/evp/evp_lib.o crypto/evp/bio_ok.o crypto/evp/evp_pkey.o crypto/evp/evp_pbe.o crypto/evp/p5_crpt.o crypto/evp/p5_crpt2.o crypto/evp/e_old.o crypto/evp/pmeth_lib.o crypto/evp/pmeth_fn.o crypto/evp/pmeth_gn.o crypto/evp/m_sigver.o crypto/evp/e_aes_cbc_hmac_sha1.o crypto/evp/e_aes_cbc_hmac_sha256.o crypto/evp/e_rc4_hmac_md5.o crypto/asn1/a_object.o crypto/asn1/a_bitstr.o crypto/asn1/a_utctm.o crypto/asn1/a_gentm.o crypto/asn1/a_time.o crypto/asn1/a_int.o crypto/asn1/a_octet.o crypto/asn1/a_print.o crypto/asn1/a_type.o crypto/asn1/a_set.o crypto/asn1/a_dup.o crypto/asn1/a_d2i_fp.o crypto/asn1/a_i2d_fp.o crypto/asn1/a_enum.o crypto/asn1/a_utf8.o crypto/asn1/a_sign.o crypto/asn1/a_digest.o crypto/asn1/a_verify.o crypto/asn1/a_mbstr.o crypto/asn1/a_strex.o crypto/asn1/x_algor.o crypto/asn1/x_val.o crypto/asn1/x_pubkey.o crypto/asn1/x_sig.o crypto/asn1/x_req.o crypto/asn1/x_attrib.o crypto/asn1/x_bignum.o crypto/asn1/x_long.o crypto/asn1/x_name.o crypto/asn1/x_x509.o crypto/asn1/x_x509a.o crypto/asn1/x_crl.o crypto/asn1/x_info.o crypto/asn1/x_spki.o crypto/asn1/nsseq.o crypto/asn1/x_nx509.o crypto/asn1/d2i_pu.o crypto/asn1/d2i_pr.o crypto/asn1/i2d_pu.o crypto/asn1/i2d_pr.o crypto/asn1/t_req.o crypto/asn1/t_x509.o crypto/asn1/t_x509a.o crypto/asn1/t_crl.o crypto/asn1/t_pkey.o crypto/asn1/t_spki.o crypto/asn1/t_bitst.o crypto/asn1/tasn_new.o crypto/asn1/tasn_fre.o crypto/asn1/tasn_enc.o crypto/asn1/tasn_dec.o crypto/asn1/tasn_utl.o crypto/asn1/tasn_typ.o crypto/asn1/tasn_prn.o crypto/asn1/ameth_lib.o crypto/asn1/f_int.o crypto/asn1/f_string.o crypto/asn1/n_pkey.o crypto/asn1/f_enum.o crypto/asn1/x_pkey.o crypto/asn1/a_bool.o crypto/asn1/x_exten.o crypto/asn1/bio_asn1.o crypto/asn1/bio_ndef.o crypto/asn1/asn_mime.o crypto/asn1/asn1_gen.o crypto/asn1/asn1_par.o crypto/asn1/asn1_lib.o crypto/asn1/asn1_err.o crypto/asn1/a_bytes.o crypto/asn1/a_strnid.o crypto/asn1/evp_asn1.o crypto/asn1/asn_pack.o crypto/asn1/p5_pbe.o crypto/asn1/p5_pbev2.o crypto/asn1/p8_pkey.o crypto/asn1/asn_moid.o crypto/pem/pem_sign.o crypto/pem/pem_seal.o crypto/pem/pem_info.o crypto/pem/pem_lib.o crypto/pem/pem_all.o crypto/pem/pem_err.o crypto/pem/pem_x509.o crypto/pem/pem_xaux.o crypto/pem/pem_oth.o crypto/pem/pem_pk8.o crypto/pem/pem_pkey.o crypto/pem/pvkfmt.o crypto/x509/x509_def.o crypto/x509/x509_d2.o crypto/x509/x509_r2x.o crypto/x509/x509_cmp.o crypto/x509/x509_obj.o crypto/x509/x509_req.o crypto/x509/x509spki.o crypto/x509/x509_vfy.o crypto/x509/x509_set.o crypto/x509/x509cset.o crypto/x509/x509rset.o crypto/x509/x509_err.o crypto/x509/x509name.o crypto/x509/x509_v3.o crypto/x509/x509_ext.o crypto/x509/x509_att.o crypto/x509/x509type.o crypto/x509/x509_lu.o crypto/x509/x_all.o crypto/x509/x509_txt.o crypto/x509/x509_trs.o crypto/x509/x509_vpm.o crypto/x509v3/v3_bcons.o crypto/x509v3/v3_bitst.o crypto/x509v3/v3_conf.o crypto/x509v3/v3_extku.o crypto/x509v3/v3_ia5.o crypto/x509v3/v3_lib.o crypto/x509v3/v3_prn.o crypto/x509v3/v3_utl.o crypto/x509v3/v3err.o crypto/x509v3/v3_genn.o crypto/x509v3/v3_alt.o crypto/x509v3/v3_skey.o crypto/x509v3/v3_akey.o crypto/x509v3/v3_pku.o crypto/x509v3/v3_int.o crypto/x509v3/v3_enum.o crypto/x509v3/v3_sxnet.o crypto/x509v3/v3_cpols.o crypto/x509v3/v3_crld.o crypto/x509v3/v3_purp.o crypto/x509v3/v3_info.o crypto/x509v3/v3_ocsp.o crypto/x509v3/v3_akeya.o crypto/x509v3/v3_pmaps.o crypto/x509v3/v3_pcons.o crypto/x509v3/v3_ncons.o crypto/x509v3/v3_pcia.o crypto/x509v3/v3_pci.o crypto/x509v3/pcy_cache.o crypto/x509v3/pcy_node.o crypto/x509v3/pcy_data.o crypto/x509v3/pcy_map.o crypto/x509v3/pcy_tree.o crypto/x509v3/pcy_lib.o crypto/x509v3/v3_asid.o crypto/x509v3/v3_addr.o crypto/conf/conf_err.o crypto/conf/conf_lib.o crypto/conf/conf_api.o crypto/conf/conf_def.o crypto/conf/conf_mod.o crypto/conf/conf_mall.o crypto/conf/conf_sap.o crypto/txt_db/txt_db.o crypto/pkcs7/pk7_asn1.o crypto/pkcs7/pk7_lib.o crypto/pkcs7/pkcs7err.o crypto/pkcs7/pk7_doit.o crypto/pkcs7/pk7_smime.o crypto/pkcs7/pk7_attr.o crypto/pkcs7/pk7_mime.o crypto/pkcs7/bio_pk7.o crypto/pkcs12/p12_add.o crypto/pkcs12/p12_asn.o crypto/pkcs12/p12_attr.o crypto/pkcs12/p12_crpt.o crypto/pkcs12/p12_crt.o crypto/pkcs12/p12_decr.o crypto/pkcs12/p12_init.o crypto/pkcs12/p12_key.o crypto/pkcs12/p12_kiss.o crypto/pkcs12/p12_mutl.o crypto/pkcs12/p12_utl.o crypto/pkcs12/p12_npas.o crypto/pkcs12/pk12err.o crypto/pkcs12/p12_p8d.o crypto/pkcs12/p12_p8e.o crypto/comp/comp_lib.o crypto/comp/comp_err.o crypto/comp/c_rle.o crypto/comp/c_zlib.o crypto/ocsp/ocsp_asn.o crypto/ocsp/ocsp_ext.o crypto/ocsp/ocsp_ht.o crypto/ocsp/ocsp_lib.o crypto/ocsp/ocsp_cl.o crypto/ocsp/ocsp_srv.o crypto/ocsp/ocsp_prn.o crypto/ocsp/ocsp_vfy.o crypto/ocsp/ocsp_err.o crypto/cmac/cmac.o crypto/cmac/cm_ameth.o crypto/cmac/cm_pmeth.o 
 make[1]: Leaving directory '/opt/shim/Cryptlib/OpenSSL'
 mkdir -p lib
 make VPATH=/opt/shim/lib TOPDIR=/opt/shim -C lib -f /opt/shim/lib/Makefile
@@ -1278,13 +1278,13 @@ ar rcs lib.a configtable.o console.o execute.o guid.o print_crypto.o security_po
 make[1]: Leaving directory '/opt/shim/lib'
 mkdir -p gnu-efi/lib gnu-efi/gnuefi
 make -C gnu-efi \
-        COMPILER="gcc" \
-        CCC_CC="gcc" \
-        CC="gcc" \
-        ARCH=x86_64 \
-        TOPDIR=/opt/shim/gnu-efi \
-        -f /opt/shim/gnu-efi/Makefile \
-        lib gnuefi inc
+	COMPILER="gcc" \
+	CCC_CC="gcc" \
+	CC="gcc" \
+	ARCH=x86_64 \
+	TOPDIR=/opt/shim/gnu-efi \
+	-f /opt/shim/gnu-efi/Makefile \
+	lib gnuefi inc
 make[1]: Entering directory '/opt/shim/gnu-efi'
 mkdir -p /opt/shim/gnu-efi/x86_64/lib
 make -C /opt/shim/gnu-efi/x86_64/lib -f /opt/shim/gnu-efi//lib/Makefile SRCDIR=/opt/shim/gnu-efi//lib ARCH=x86_64
@@ -1321,8 +1321,8 @@ gcc -I/opt/shim/gnu-efi//lib -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86
 gcc -I/opt/shim/gnu-efi//lib -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /opt/shim/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /opt/shim/gnu-efi//lib/x86_64/callwrap.c -o x86_64/callwrap.o
 gcc -I/opt/shim/gnu-efi//lib -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /opt/shim/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /opt/shim/gnu-efi//lib/x86_64/efi_stub.S -o x86_64/efi_stub.o
 gcc-ar rv -U libefi.a boxdraw.o smbios.o console.o crc.o data.o debug.o dpath.o error.o event.o exit.o guid.o hand.o hw.o init.o lock.o misc.o pause.o print.o sread.o str.o cmdline.o runtime/rtlock.o runtime/efirtlib.o runtime/rtstr.o runtime/vm.o runtime/rtdata.o x86_64/initplat.o x86_64/math.o x86_64/setjmp.o x86_64/callwrap.o x86_64/efi_stub.o
-/usr/bin/ar: creating libefi.a
-a - boxdraw.o
+[91m/usr/bin/ar: creating libefi.a
+[0ma - boxdraw.o
 a - smbios.o
 a - console.o
 a - crc.o
@@ -1360,8 +1360,8 @@ make[2]: Entering directory '/opt/shim/gnu-efi/x86_64/gnuefi'
 gcc -I/opt/shim/gnu-efi//gnuefi -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /opt/shim/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /opt/shim/gnu-efi//gnuefi/crt0-efi-x86_64.S -o crt0-efi-x86_64.o
 gcc -I/opt/shim/gnu-efi//gnuefi -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /opt/shim/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /opt/shim/gnu-efi//gnuefi/reloc_x86_64.c -o reloc_x86_64.o
 gcc-ar rv -U libgnuefi.a reloc_x86_64.o
-/usr/bin/ar: creating libgnuefi.a
-a - reloc_x86_64.o
+[91m/usr/bin/ar: [0m[91mcreating libgnuefi.a[0m[91m
+[0ma - reloc_x86_64.o
 make[2]: Leaving directory '/opt/shim/gnu-efi/x86_64/gnuefi'
 mkdir -p /opt/shim/gnu-efi/x86_64/inc
 make -C /opt/shim/gnu-efi/x86_64/inc -f /opt/shim/gnu-efi//inc/Makefile SRCDIR=/opt/shim/gnu-efi//inc ARCH=x86_64
@@ -1372,97 +1372,90 @@ make[1]: Leaving directory '/opt/shim/gnu-efi'
 ld -o shimx64.so --hash-style=sysv -nostdlib -znocombreloc -T /opt/shim/elf_x86_64_efi.lds -shared -Bsymbolic -Lgnu-efi/x86_64/gnuefi -Lgnu-efi/x86_64/lib -LCryptlib -LCryptlib/OpenSSL gnu-efi/x86_64/gnuefi/crt0-efi-x86_64.o --build-id=sha1  --no-undefined shim.o globals.o mok.o netboot.o cert.o replacements.o tpm.o version.o errlog.o sbat.o sbat_data.o pe.o httpboot.o csv.o load-options.o Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a lib/lib.a gnu-efi/x86_64/lib/libefi.a gnu-efi/x86_64/gnuefi/libgnuefi.a -lefi -lgnuefi --start-group Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a --end-group /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a lib/lib.a
 gcc -std=gnu11 -Og -g3 -Wall -Wextra -Wno-missing-field-initializers -Werror -o post-process-pe /opt/shim/post-process-pe.c
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
-        -j .dynamic -j .rodata -j .rel* \
-        -j .rela* -j .dyn -j .reloc -j .eh_frame \
-        -j .vendor_cert -j .sbat \
-        --target efi-app-x86_64 shimx64.so shimx64.efi
+	-j .dynamic -j .rodata -j .rel* \
+	-j .rela* -j .dyn -j .reloc -j .eh_frame \
+	-j .vendor_cert -j .sbat \
+	--target efi-app-x86_64 shimx64.so shimx64.efi
 ./post-process-pe -vv shimx64.efi
 objcopy -D -j .text -j .sdata -j .data \
-        -j .dynamic -j .rodata -j .rel* \
-        -j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
-        -j .debug_info -j .debug_abbrev -j .debug_aranges \
-        -j .debug_line -j .debug_str -j .debug_ranges \
-        -j .note.gnu.build-id \
-        shimx64.so shimx64.efi.debug
+	-j .dynamic -j .rodata -j .rel* \
+	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
+	-j .debug_info -j .debug_abbrev -j .debug_aranges \
+	-j .debug_line -j .debug_str -j .debug_ranges \
+	-j .note.gnu.build-id \
+	shimx64.so shimx64.efi.debug
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o MokManager.o MokManager.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o PasswordCrypt.o PasswordCrypt.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o crypt_blowfish.o crypt_blowfish.c
 ld -o mmx64.so --hash-style=sysv -nostdlib -znocombreloc -T /opt/shim/elf_x86_64_efi.lds -shared -Bsymbolic -Lgnu-efi/x86_64/gnuefi -Lgnu-efi/x86_64/lib -LCryptlib -LCryptlib/OpenSSL gnu-efi/x86_64/gnuefi/crt0-efi-x86_64.o --build-id=sha1  --no-undefined MokManager.o PasswordCrypt.o crypt_blowfish.o errlog.o sbat_data.o globals.o Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a lib/lib.a gnu-efi/x86_64/lib/libefi.a gnu-efi/x86_64/gnuefi/libgnuefi.a -lefi -lgnuefi --start-group Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a --end-group /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a lib/lib.a
 objcopy -D -j .text -j .sdata -j .data \
-        -j .dynamic -j .rodata -j .rel* \
-        -j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
-        -j .debug_info -j .debug_abbrev -j .debug_aranges \
-        -j .debug_line -j .debug_str -j .debug_ranges \
-        -j .note.gnu.build-id \
-        mmx64.so mmx64.efi.debug
+	-j .dynamic -j .rodata -j .rel* \
+	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
+	-j .debug_info -j .debug_abbrev -j .debug_aranges \
+	-j .debug_line -j .debug_str -j .debug_ranges \
+	-j .note.gnu.build-id \
+	mmx64.so mmx64.efi.debug
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.6/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o fallback.o fallback.c
 ld -o fbx64.so --hash-style=sysv -nostdlib -znocombreloc -T /opt/shim/elf_x86_64_efi.lds -shared -Bsymbolic -Lgnu-efi/x86_64/gnuefi -Lgnu-efi/x86_64/lib -LCryptlib -LCryptlib/OpenSSL gnu-efi/x86_64/gnuefi/crt0-efi-x86_64.o --build-id=sha1  --no-undefined fallback.o tpm.o errlog.o sbat_data.o globals.o Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a lib/lib.a gnu-efi/x86_64/lib/libefi.a gnu-efi/x86_64/gnuefi/libgnuefi.a -lefi -lgnuefi --start-group Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a --end-group /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a lib/lib.a
 objcopy -D -j .text -j .sdata -j .data \
-        -j .dynamic -j .rodata -j .rel* \
-        -j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
-        -j .debug_info -j .debug_abbrev -j .debug_aranges \
-        -j .debug_line -j .debug_str -j .debug_ranges \
-        -j .note.gnu.build-id \
-        fbx64.so fbx64.efi.debug
+	-j .dynamic -j .rodata -j .rel* \
+	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
+	-j .debug_info -j .debug_abbrev -j .debug_aranges \
+	-j .debug_line -j .debug_str -j .debug_ranges \
+	-j .note.gnu.build-id \
+	fbx64.so fbx64.efi.debug
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
-        -j .dynamic -j .rodata -j .rel* \
-        -j .rela* -j .dyn -j .reloc -j .eh_frame \
-        -j .vendor_cert -j .sbat \
-        --target efi-app-x86_64 mmx64.so mmx64.efi
+	-j .dynamic -j .rodata -j .rel* \
+	-j .rela* -j .dyn -j .reloc -j .eh_frame \
+	-j .vendor_cert -j .sbat \
+	--target efi-app-x86_64 mmx64.so mmx64.efi
 ./post-process-pe -vv mmx64.efi
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
-        -j .dynamic -j .rodata -j .rel* \
-        -j .rela* -j .dyn -j .reloc -j .eh_frame \
-        -j .vendor_cert -j .sbat \
-        --target efi-app-x86_64 fbx64.so fbx64.efi
+	-j .dynamic -j .rodata -j .rel* \
+	-j .rela* -j .dyn -j .reloc -j .eh_frame \
+	-j .vendor_cert -j .sbat \
+	--target efi-app-x86_64 fbx64.so fbx64.efi
 ./post-process-pe -vv fbx64.efi
-Removing intermediate container fba158b734c2
- ---> 96c9c934b9ca
+Removing intermediate container 0a82f30e7c09
+ ---> 2b1d38360571
 Step 17/23 : RUN objdump -s -j .sbat shimx64.efi
- ---> Running in 3e590d797df6
+ ---> Running in 832bea0efb98
 
 shimx64.efi:     file format pei-x86-64
 
 Contents of section .sbat:
- d0000 73626174 2c312c53 42415420 56657273  sbat,1,SBAT Vers
- d0010 696f6e2c 73626174 2c312c68 74747073  ion,sbat,1,https
- d0020 3a2f2f67 69746875 622e636f 6d2f7268  ://github.com/rh
- d0030 626f6f74 2f736869 6d2f626c 6f622f6d  boot/shim/blob/m
- d0040 61696e2f 53424154 2e6d640a 7368696d  ain/SBAT.md.shim
- d0050 2c312c55 45464920 7368696d 2c736869  ,1,UEFI shim,shi
- d0060 6d2c312c 68747470 733a2f2f 67697468  m,1,https://gith
- d0070 75622e63 6f6d2f72 68626f6f 742f7368  ub.com/rhboot/sh
- d0080 696d0a73 68696d2e 616d7a65 7474612c  im.shim.amzetta,
- d0090 312c536e 61704f53 2c736869 6d2c3135  1,SnapOS,shim,15
- d00a0 2e362c68 74747073 3a2f2f61 6d7a6574  .6,https://amzet
- d00b0 74612e63 6f6d0a                      ta.com.
-Removing intermediate container 3e590d797df6
- ---> 306431e3b3ab
+ d0000 7368696d 2e616d7a 65747461 2c322c41  shim.amzetta,2,A
+ d0010 6d5a6574 74612054 6563686e 6f6c6f67  mZetta Technolog
+ d0020 6965732c 7368696d 2c31352e 362c6874  ies,shim,15.6,ht
+ d0030 7470733a 2f2f616d 7a657474 612e636f  tps://amzetta.co
+ d0040 6d2f0a                               m/.             
+Removing intermediate container 832bea0efb98
+ ---> a4840f12f63e
 Step 18/23 : RUN sha256sum shimx64.efi > builded_shim_hash
- ---> Running in 9dbf73523dec
-Removing intermediate container 9dbf73523dec
- ---> d2d196df8de6
+ ---> Running in 79857152bcb9
+Removing intermediate container 79857152bcb9
+ ---> d0244aa5e0ad
 Step 19/23 : RUN hexdump -Cv shimx64.efi > builded_shim_hexdump
- ---> Running in 48ae42efbc80
-Removing intermediate container 48ae42efbc80
- ---> 649c4ce7570d
+ ---> Running in afc36695a8ba
+Removing intermediate container afc36695a8ba
+ ---> e13749a887cd
 Step 20/23 : RUN cat builded_shim_hash
- ---> Running in 272de20f82e7
-542fc0eee529c01b65dbdaa279a4d829902a31eded463a898ce430306342ee2d  shimx64.efi
-Removing intermediate container 272de20f82e7
- ---> a148dacf0ba9
+ ---> Running in f12e5126d37d
+a89ec6ed365f442e0761835fc0f736d4206b2bd5975209f8a5f23c35f361147c  shimx64.efi
+Removing intermediate container f12e5126d37d
+ ---> 92596f46820c
 Step 21/23 : RUN cat original_shim_hash
- ---> Running in 85998b5cb2f9
-542fc0eee529c01b65dbdaa279a4d829902a31eded463a898ce430306342ee2d  shimx64.efi
-Removing intermediate container 85998b5cb2f9
- ---> b9dc64dace6f
+ ---> Running in 62cdebd326e1
+a89ec6ed365f442e0761835fc0f736d4206b2bd5975209f8a5f23c35f361147c  shimx64.efi
+Removing intermediate container 62cdebd326e1
+ ---> 7a55ffdbec62
 Step 22/23 : RUN diff builded_shim_hash original_shim_hash
- ---> Running in a3dcf5ab4f40
-Removing intermediate container a3dcf5ab4f40
- ---> 7f98f9d443d8
+ ---> Running in ba02d7ed943d
+Removing intermediate container ba02d7ed943d
+ ---> 14a81d7bfe50
 Step 23/23 : RUN diff builded_shim_hexdump original_shim_hexdump
- ---> Running in e7b1d3fb782a
-Removing intermediate container e7b1d3fb782a
- ---> a08805f10bd1
-Successfully built a08805f10bd1
+ ---> Running in 7e6917d91807
+Removing intermediate container 7e6917d91807
+ ---> fb7f04f8242b
+Successfully built fb7f04f8242b
 Successfully tagged shim-build:latest
