@@ -73,13 +73,13 @@ https://github.com/rhboot/shim/releases/download/15.6/shim-15.6.tar.bz2
 This matches https://github.com/rhboot/shim/releases/tag/15.6 and contains the appropriate gnu-efi source.
 
 -------------------------------------------------------------------------------
-Created from https://github.com/rhboot/shim/releases/download/15.6 release.
+Created from https://github.com/rhboot/shim/releases/tag/15.6 release.
 No added patches.
 
 -------------------------------------------------------------------------------
 ### URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://github.com/rhboot/shim.git, tag 15.6
+https://github.com/rhboot/shim/releases/tag/15.6, tag 15.6
 Original source code with only Amzetta Technologies certificate is embedded.
 
 -------------------------------------------------------------------------------
@@ -203,7 +203,6 @@ grub.amzetta,2,AmZetta Technologies,grub2,2.06-69edb312,https://amzetta.com/
 
 Modules in signed grub:
 all_video boot btrfs cat chain configfile echo efifwsetup efinet ext2 fat font gettext gfxmenu gfxterm gfxterm_background gzio halt hfsplus iso9660 jpeg keystatus loadenv linux lsefi lsefimmap  lssal lvm mdraid09  memdisk minicmd  normal part_apple part_msdos part_gpt password_pbkdf2  reboot search  search_fs_uuid search_fs_file search_label sleep test tftp video xzio lzopio gcry_dsa gcry_sha512 cmp eval true serial hashsum gcry_md5 gcry_rsa
-
 
 
 -------------------------------------------------------------------------------
