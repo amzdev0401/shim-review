@@ -184,22 +184,22 @@ This should include logs for creating the buildroots, applying patches, doing th
 *******************************************************************************
 ### What changes were made since your SHIM was last signed?
 *******************************************************************************
-[your text here]
+[This is first time submission.]
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-[your text here]
+[0e35fd08db817724c44e641f7048e02addf440e5a5e299fff286e9b7e972e8d2  shimx64.efi]
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
 *******************************************************************************
-[your text here]
+[Amzetta Technologies's private key stored in Hardware Security Module(YubiHSM). Only authorized engineering professional having the access to build the binaries and sigining (SHIM, GRUB2, Linux kernel and SnapOS software)]
 
 *******************************************************************************
 ### Do you use EV certificates as embedded certificates in the SHIM?
 *******************************************************************************
-[your text here]
+[Yes]
 
 *******************************************************************************
 ### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( grub2, fwupd, fwupdate, shim + all child shim binaries )?
