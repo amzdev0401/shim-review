@@ -35,7 +35,7 @@ Here's the template:
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
 *******************************************************************************
-[SnapOS is the operating system build from scratch from the base Ubuntu source code. There is not Ubuntu referance or ubuntu ]
+[SnapOS is the customized operating system build from the scratch from Ubuntu source code based on the product feature requirements.]
 
 *******************************************************************************
 ### Who is the primary contact for security updates, etc.?
