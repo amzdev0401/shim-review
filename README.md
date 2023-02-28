@@ -35,7 +35,7 @@ Here's the template:
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
 *******************************************************************************
-[your text here]
+[SnapOS is the operating system build from scratch from the base Ubuntu source code. There is not Ubuntu referance or ubuntu ]
 
 *******************************************************************************
 ### Who is the primary contact for security updates, etc.?
@@ -142,7 +142,7 @@ grub.amzetta,3,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 *******************************************************************************
-[your text here]
+[This is the first time SHIM submission, We are going to use GRUB 2.11 for upcoming product line.]
 
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
@@ -150,24 +150,24 @@ grub.amzetta,3,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 ### Is upstream commit [75b0cea7bf307f362057cc778efe89af4c615354 "ACPI: configfs: Disallow loading ACPI tables when locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
 ### Is upstream commit [eadb2f47a3ced5c64b23b90fd2a3463f63726066 "lockdown: also lock down previous kgdb use"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=eadb2f47a3ced5c64b23b90fd2a3463f63726066) applied?
 *******************************************************************************
-[your text here]
+[1957a85b0032a81e6482ca4aab883643b8dae06e: Yes 75b0cea7bf307f362057cc778efe89af4c615354: Yes eadb2f47a3ced5c64b23b90fd2a3463f63726066: No ( CONFIG_DEBUG_KERNEL flag is not enabled in our linux kernel)]
 
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
-[your text here]
+[No additional local patches applied in signed kernel]
 
 *******************************************************************************
 ### If you use vendor_db functionality of providing multiple certificates and/or hashes please briefly describe your certificate setup.
 ### If there are allow-listed hashes please provide exact binaries for which hashes are created via file sharing service, available in public with anonymous access for verification.
 *******************************************************************************
-[your text here]
+[No, We don't use vendor_db functionality]
 
 *******************************************************************************
 ### If you are re-using a previously used (CA) certificate, you will need to add the hashes of the previous GRUB2 binaries exposed to the CVEs to vendor_dbx in shim in order to prevent GRUB2 from being able to chainload those older GRUB2 binaries. If you are changing to a new (CA) certificate, this does not apply.
 ### Please describe your strategy.
 *******************************************************************************
-[your text here]
+[This is the first time SHIM submission, We are going to use GRUB2 2.11 for upcoming product line.]
 
 *******************************************************************************
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -179,7 +179,7 @@ grub.amzetta,3,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-[your text here]
+[https://github.com/amzdev0401/shim-review/blob/AmZetta-shim-x86_64-20230225/build.log]
 
 *******************************************************************************
 ### What changes were made since your SHIM was last signed?
