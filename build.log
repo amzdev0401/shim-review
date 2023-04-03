@@ -1,36 +1,36 @@
-Sending build context to Docker daemon  2.081MB
+Sending build context to Docker daemon    2.1MB
 Step 1/30 : FROM ubuntu:18.04
  ---> 5d2df19066ac
 Step 2/30 : LABEL MAINTAINER AmZetta Technologies <sales@amzetta.com>
- ---> Running in 6f16bab00a1f
-Removing intermediate container 6f16bab00a1f
- ---> c45b427b0e2a
+ ---> Running in 718be75bbb4f
+Removing intermediate container 718be75bbb4f
+ ---> bf0eb117c247
 Step 3/30 : RUN apt-get update
- ---> Running in 3aee9842779c
-Get:1 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
-Get:2 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
-Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
-Get:4 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [83.3 kB]
-Get:5 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1597 kB]
-Get:6 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
-Get:7 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
-Get:8 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [3190 kB]
+ ---> Running in 9651b51a04bc
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
+Get:3 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1496 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [83.3 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:7 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.7 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [3243 kB]
 Get:9 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
 Get:10 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
-Get:11 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.8 kB]
-Get:12 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1426 kB]
-Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1466 kB]
-Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3610 kB]
+Get:11 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1613 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2387 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3665 kB]
 Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [30.8 kB]
-Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2371 kB]
-Get:17 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [64.0 kB]
-Get:18 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [20.5 kB]
-Fetched 27.2 MB in 2s (16.4 MB/s)
+Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1537 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [20.6 kB]
+Get:18 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [64.0 kB]
+Fetched 27.5 MB in 2s (11.1 MB/s)
 Reading package lists...
-Removing intermediate container 3aee9842779c
- ---> 129fb904aa32
+Removing intermediate container 9651b51a04bc
+ ---> 88c3b284dcc8
 Step 4/30 : RUN apt-get install -y build-essential git curl bsdmainutils wget dos2unix
- ---> Running in 911c6e8a9a3c
+ ---> Running in 84d234a22034
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -92,7 +92,7 @@ The following NEW packages will be installed:
   manpages-dev multiarch-support netbase openssh-client openssl patch perl
   perl-modules-5.26 pinentry-curses publicsuffix readline-common wget xauth
   xz-utils
-0 upgraded, 119 newly installed, 0 to remove and 4 not upgraded.
+0 upgraded, 119 newly installed, 0 to remove and 7 not upgraded.
 Need to get 67.0 MB of archives.
 After this operation, 282 MB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu bionic/main amd64 liblocale-gettext-perl amd64 1.07-3build2 [16.6 kB]
@@ -120,13 +120,13 @@ Get:22 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsqlite3-0 a
 Get:23 http://archive.ubuntu.com/ubuntu bionic/main amd64 netbase all 5.4 [12.7 kB]
 Get:24 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 xz-utils amd64 5.2.2-1.3ubuntu0.1 [83.8 kB]
 Get:25 http://archive.ubuntu.com/ubuntu bionic/main amd64 bsdmainutils amd64 11.1.2ubuntu1 [181 kB]
-Get:26 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 krb5-locales all 1.16-2ubuntu0.3 [13.5 kB]
+Get:26 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 krb5-locales all 1.16-2ubuntu0.4 [13.4 kB]
 Get:27 http://archive.ubuntu.com/ubuntu bionic/main amd64 libedit2 amd64 3.1-20170329-1 [76.9 kB]
-Get:28 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5support0 amd64 1.16-2ubuntu0.3 [30.9 kB]
-Get:29 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libk5crypto3 amd64 1.16-2ubuntu0.3 [85.5 kB]
+Get:28 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5support0 amd64 1.16-2ubuntu0.4 [30.9 kB]
+Get:29 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libk5crypto3 amd64 1.16-2ubuntu0.4 [85.3 kB]
 Get:30 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkeyutils1 amd64 1.5.9-9.2ubuntu2.1 [8764 B]
-Get:31 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5-3 amd64 1.16-2ubuntu0.3 [278 kB]
-Get:32 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgssapi-krb5-2 amd64 1.16-2ubuntu0.3 [122 kB]
+Get:31 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5-3 amd64 1.16-2ubuntu0.4 [278 kB]
+Get:32 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgssapi-krb5-2 amd64 1.16-2ubuntu0.4 [122 kB]
 Get:33 http://archive.ubuntu.com/ubuntu bionic/main amd64 libpsl5 amd64 0.19.1-5build1 [41.8 kB]
 Get:34 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.0.0 amd64 1.0.2n-1ubuntu5.11 [1089 kB]
 Get:35 http://archive.ubuntu.com/ubuntu bionic/main amd64 libxmuu1 amd64 2:1.1.2-2 [9674 B]
@@ -140,7 +140,7 @@ Get:42 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libbinutils am
 Get:43 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.30-21ubuntu1~18.04.8 [1839 kB]
 Get:44 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils amd64 2.30-21ubuntu1~18.04.8 [3388 B]
 Get:45 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc-dev-bin amd64 2.27-3ubuntu1.6 [71.9 kB]
-Get:46 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-libc-dev amd64 4.15.0-204.215 [996 kB]
+Get:46 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-libc-dev amd64 4.15.0-208.220 [997 kB]
 Get:47 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc6-dev amd64 2.27-3ubuntu1.6 [2587 kB]
 Get:48 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gcc-7-base amd64 7.5.0-3ubuntu1~18.04 [18.3 kB]
 Get:49 http://archive.ubuntu.com/ubuntu bionic/main amd64 libisl19 amd64 0.19-1 [551 kB]
@@ -185,8 +185,8 @@ Get:87 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-common
 Get:88 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-2.4-2 amd64 2.4.45+dfsg-1ubuntu1.11 [154 kB]
 Get:89 http://archive.ubuntu.com/ubuntu bionic/main amd64 libnghttp2-14 amd64 1.30.0-1ubuntu1 [77.8 kB]
 Get:90 http://archive.ubuntu.com/ubuntu bionic/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-1 [54.2 kB]
-Get:91 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl4 amd64 7.58.0-2ubuntu3.23 [220 kB]
-Get:92 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 curl amd64 7.58.0-2ubuntu3.23 [159 kB]
+Get:91 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl4 amd64 7.58.0-2ubuntu3.24 [221 kB]
+Get:92 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 curl amd64 7.58.0-2ubuntu3.24 [159 kB]
 Get:93 http://archive.ubuntu.com/ubuntu bionic/main amd64 libassuan0 amd64 2.5.1-2 [35.0 kB]
 Get:94 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gpgconf amd64 2.2.4-1ubuntu1.6 [124 kB]
 Get:95 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libksba8 amd64 1.3.5-2ubuntu0.18.04.2 [94.6 kB]
@@ -194,10 +194,10 @@ Get:96 http://archive.ubuntu.com/ubuntu bionic/main amd64 libnpth0 amd64 1.5-3 [
 Get:97 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 dirmngr amd64 2.2.4-1ubuntu1.6 [317 kB]
 Get:98 http://archive.ubuntu.com/ubuntu bionic/main amd64 libfakeroot amd64 1.22-2ubuntu1 [25.9 kB]
 Get:99 http://archive.ubuntu.com/ubuntu bionic/main amd64 fakeroot amd64 1.22-2ubuntu1 [62.3 kB]
-Get:100 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl3-gnutls amd64 7.58.0-2ubuntu3.23 [218 kB]
+Get:100 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl3-gnutls amd64 7.58.0-2ubuntu3.24 [219 kB]
 Get:101 http://archive.ubuntu.com/ubuntu bionic/main amd64 liberror-perl all 0.17025-1 [22.8 kB]
-Get:102 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 git-man all 1:2.17.1-1ubuntu0.16 [805 kB]
-Get:103 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 git amd64 1:2.17.1-1ubuntu0.16 [3929 kB]
+Get:102 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 git-man all 1:2.17.1-1ubuntu0.17 [804 kB]
+Get:103 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 git amd64 1:2.17.1-1ubuntu0.17 [3924 kB]
 Get:104 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gnupg-l10n all 2.2.4-1ubuntu1.6 [50.1 kB]
 Get:105 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gnupg-utils amd64 2.2.4-1ubuntu1.6 [128 kB]
 Get:106 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gpg amd64 2.2.4-1ubuntu1.6 [468 kB]
@@ -215,7 +215,7 @@ Get:117 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsasl2-modu
 Get:118 http://archive.ubuntu.com/ubuntu bionic/main amd64 manpages-dev all 4.15-1 [2217 kB]
 Get:119 http://archive.ubuntu.com/ubuntu bionic/universe amd64 dos2unix amd64 7.3.4-3 [351 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 67.0 MB in 25s (2648 kB/s)
+[0mFetched 67.0 MB in 27s (2452 kB/s)
 Selecting previously unselected package liblocale-gettext-perl.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4051 files and directories currently installed.)
 Preparing to unpack .../0-liblocale-gettext-perl_1.07-3build2_amd64.deb ...
@@ -295,26 +295,26 @@ Selecting previously unselected package bsdmainutils.
 Preparing to unpack .../016-bsdmainutils_11.1.2ubuntu1_amd64.deb ...
 Unpacking bsdmainutils (11.1.2ubuntu1) ...
 Selecting previously unselected package krb5-locales.
-Preparing to unpack .../017-krb5-locales_1.16-2ubuntu0.3_all.deb ...
-Unpacking krb5-locales (1.16-2ubuntu0.3) ...
+Preparing to unpack .../017-krb5-locales_1.16-2ubuntu0.4_all.deb ...
+Unpacking krb5-locales (1.16-2ubuntu0.4) ...
 Selecting previously unselected package libedit2:amd64.
 Preparing to unpack .../018-libedit2_3.1-20170329-1_amd64.deb ...
 Unpacking libedit2:amd64 (3.1-20170329-1) ...
 Selecting previously unselected package libkrb5support0:amd64.
-Preparing to unpack .../019-libkrb5support0_1.16-2ubuntu0.3_amd64.deb ...
-Unpacking libkrb5support0:amd64 (1.16-2ubuntu0.3) ...
+Preparing to unpack .../019-libkrb5support0_1.16-2ubuntu0.4_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.16-2ubuntu0.4) ...
 Selecting previously unselected package libk5crypto3:amd64.
-Preparing to unpack .../020-libk5crypto3_1.16-2ubuntu0.3_amd64.deb ...
-Unpacking libk5crypto3:amd64 (1.16-2ubuntu0.3) ...
+Preparing to unpack .../020-libk5crypto3_1.16-2ubuntu0.4_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.16-2ubuntu0.4) ...
 Selecting previously unselected package libkeyutils1:amd64.
 Preparing to unpack .../021-libkeyutils1_1.5.9-9.2ubuntu2.1_amd64.deb ...
 Unpacking libkeyutils1:amd64 (1.5.9-9.2ubuntu2.1) ...
 Selecting previously unselected package libkrb5-3:amd64.
-Preparing to unpack .../022-libkrb5-3_1.16-2ubuntu0.3_amd64.deb ...
-Unpacking libkrb5-3:amd64 (1.16-2ubuntu0.3) ...
+Preparing to unpack .../022-libkrb5-3_1.16-2ubuntu0.4_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.16-2ubuntu0.4) ...
 Selecting previously unselected package libgssapi-krb5-2:amd64.
-Preparing to unpack .../023-libgssapi-krb5-2_1.16-2ubuntu0.3_amd64.deb ...
-Unpacking libgssapi-krb5-2:amd64 (1.16-2ubuntu0.3) ...
+Preparing to unpack .../023-libgssapi-krb5-2_1.16-2ubuntu0.4_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.16-2ubuntu0.4) ...
 Selecting previously unselected package libpsl5:amd64.
 Preparing to unpack .../024-libpsl5_0.19.1-5build1_amd64.deb ...
 Unpacking libpsl5:amd64 (0.19.1-5build1) ...
@@ -355,8 +355,8 @@ Selecting previously unselected package libc-dev-bin.
 Preparing to unpack .../036-libc-dev-bin_2.27-3ubuntu1.6_amd64.deb ...
 Unpacking libc-dev-bin (2.27-3ubuntu1.6) ...
 Selecting previously unselected package linux-libc-dev:amd64.
-Preparing to unpack .../037-linux-libc-dev_4.15.0-204.215_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (4.15.0-204.215) ...
+Preparing to unpack .../037-linux-libc-dev_4.15.0-208.220_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.15.0-208.220) ...
 Selecting previously unselected package libc6-dev:amd64.
 Preparing to unpack .../038-libc6-dev_2.27-3ubuntu1.6_amd64.deb ...
 Unpacking libc6-dev:amd64 (2.27-3ubuntu1.6) ...
@@ -490,11 +490,11 @@ Selecting previously unselected package librtmp1:amd64.
 Preparing to unpack .../081-librtmp1_2.4+20151223.gitfa8646d.1-1_amd64.deb ...
 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-1) ...
 Selecting previously unselected package libcurl4:amd64.
-Preparing to unpack .../082-libcurl4_7.58.0-2ubuntu3.23_amd64.deb ...
-Unpacking libcurl4:amd64 (7.58.0-2ubuntu3.23) ...
+Preparing to unpack .../082-libcurl4_7.58.0-2ubuntu3.24_amd64.deb ...
+Unpacking libcurl4:amd64 (7.58.0-2ubuntu3.24) ...
 Selecting previously unselected package curl.
-Preparing to unpack .../083-curl_7.58.0-2ubuntu3.23_amd64.deb ...
-Unpacking curl (7.58.0-2ubuntu3.23) ...
+Preparing to unpack .../083-curl_7.58.0-2ubuntu3.24_amd64.deb ...
+Unpacking curl (7.58.0-2ubuntu3.24) ...
 Selecting previously unselected package libassuan0:amd64.
 Preparing to unpack .../084-libassuan0_2.5.1-2_amd64.deb ...
 Unpacking libassuan0:amd64 (2.5.1-2) ...
@@ -517,17 +517,17 @@ Selecting previously unselected package fakeroot.
 Preparing to unpack .../090-fakeroot_1.22-2ubuntu1_amd64.deb ...
 Unpacking fakeroot (1.22-2ubuntu1) ...
 Selecting previously unselected package libcurl3-gnutls:amd64.
-Preparing to unpack .../091-libcurl3-gnutls_7.58.0-2ubuntu3.23_amd64.deb ...
-Unpacking libcurl3-gnutls:amd64 (7.58.0-2ubuntu3.23) ...
+Preparing to unpack .../091-libcurl3-gnutls_7.58.0-2ubuntu3.24_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.58.0-2ubuntu3.24) ...
 Selecting previously unselected package liberror-perl.
 Preparing to unpack .../092-liberror-perl_0.17025-1_all.deb ...
 Unpacking liberror-perl (0.17025-1) ...
 Selecting previously unselected package git-man.
-Preparing to unpack .../093-git-man_1%3a2.17.1-1ubuntu0.16_all.deb ...
-Unpacking git-man (1:2.17.1-1ubuntu0.16) ...
+Preparing to unpack .../093-git-man_1%3a2.17.1-1ubuntu0.17_all.deb ...
+Unpacking git-man (1:2.17.1-1ubuntu0.17) ...
 Selecting previously unselected package git.
-Preparing to unpack .../094-git_1%3a2.17.1-1ubuntu0.16_amd64.deb ...
-Unpacking git (1:2.17.1-1ubuntu0.16) ...
+Preparing to unpack .../094-git_1%3a2.17.1-1ubuntu0.17_amd64.deb ...
+Unpacking git (1:2.17.1-1ubuntu0.17) ...
 Selecting previously unselected package gnupg-l10n.
 Preparing to unpack .../095-gnupg-l10n_2.2.4-1ubuntu1.6_all.deb ...
 Unpacking gnupg-l10n (2.2.4-1ubuntu1.6) ...
@@ -583,7 +583,7 @@ Setting up libgomp1:amd64 (8.4.0-1ubuntu1~18.04) ...
 Setting up libatomic1:amd64 (8.4.0-1ubuntu1~18.04) ...
 Setting up readline-common (7.0-3) ...
 Setting up manpages (4.15-1) ...
-Setting up git-man (1:2.17.1-1ubuntu0.16) ...
+Setting up git-man (1:2.17.1-1ubuntu0.17) ...
 Setting up libexpat1:amd64 (2.2.5-3ubuntu0.9) ...
 Setting up libcc1-0:amd64 (8.4.0-1ubuntu1~18.04) ...
 Setting up less (487-0.1) ...
@@ -601,7 +601,7 @@ Setting up libreadline7:amd64 (7.0-3) ...
 Setting up libpsl5:amd64 (0.19.1-5build1) ...
 Setting up libtsan0:amd64 (8.4.0-1ubuntu1~18.04) ...
 Setting up libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2.4) ...
-Setting up linux-libc-dev:amd64 (4.15.0-204.215) ...
+Setting up linux-libc-dev:amd64 (4.15.0-208.220) ...
 Setting up libmpfr6:amd64 (4.0.1-1) ...
 Setting up libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2.4) ...
 Setting up dos2unix (7.3.4-3) ...
@@ -611,14 +611,14 @@ Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-1) ...
 Setting up perl-modules-5.26 (5.26.1-6ubuntu0.6) ...
 Setting up libgdbm5:amd64 (1.14.1-6) ...
 Setting up libbsd0:amd64 (0.8.7-1ubuntu0.1) ...
-Setting up libkrb5support0:amd64 (1.16-2ubuntu0.3) ...
+Setting up libkrb5support0:amd64 (1.16-2ubuntu0.4) ...
 Setting up gnupg-l10n (2.2.4-1ubuntu1.6) ...
 Setting up liblsan0:amd64 (8.4.0-1ubuntu1~18.04) ...
 Setting up gcc-7-base:amd64 (7.5.0-3ubuntu1~18.04) ...
 Setting up binutils-common:amd64 (2.30-21ubuntu1~18.04.8) ...
 Setting up libmpx2:amd64 (8.4.0-1ubuntu1~18.04) ...
 Setting up patch (2.7.6-2ubuntu1.1) ...
-Setting up krb5-locales (1.16-2ubuntu0.3) ...
+Setting up krb5-locales (1.16-2ubuntu0.4) ...
 Setting up publicsuffix (20180223.1310-1) ...
 Setting up libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.21) ...
 debconf: unable to initialize frontend: Dialog
@@ -667,7 +667,7 @@ Setting up libx11-data (2:1.6.4-3ubuntu0.4) ...
 Setting up libxau6:amd64 (1:1.0.8-1ubuntu1) ...
 Setting up netbase (5.4) ...
 Setting up libisl19:amd64 (0.19-1) ...
-Setting up libk5crypto3:amd64 (1.16-2ubuntu0.3) ...
+Setting up libk5crypto3:amd64 (1.16-2ubuntu0.4) ...
 Setting up libwind0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
 Setting up libasan4:amd64 (7.5.0-3ubuntu1~18.04) ...
 Setting up libbinutils:amd64 (2.30-21ubuntu1~18.04.8) ...
@@ -694,7 +694,7 @@ Setting up libperl5.26:amd64 (5.26.1-6ubuntu0.6) ...
 Setting up gpgsm (2.2.4-1ubuntu1.6) ...
 Setting up gnupg-utils (2.2.4-1ubuntu1.6) ...
 Setting up pinentry-curses (1.1.0-1) ...
-Setting up libkrb5-3:amd64 (1.16-2ubuntu0.3) ...
+Setting up libkrb5-3:amd64 (1.16-2ubuntu0.4) ...
 Setting up libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
 Setting up libxcb1:amd64 (1.13-2~ubuntu18.04) ...
 Setting up libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
@@ -705,7 +705,7 @@ Setting up libx11-6:amd64 (2:1.6.4-3ubuntu0.4) ...
 Setting up gpg-agent (2.2.4-1ubuntu1.6) ...
 Setting up gpg-wks-server (2.2.4-1ubuntu1.6) ...
 Setting up libxmuu1:amd64 (2:1.1.2-2) ...
-Setting up libgssapi-krb5-2:amd64 (1.16-2ubuntu0.3) ...
+Setting up libgssapi-krb5-2:amd64 (1.16-2ubuntu0.4) ...
 Setting up perl (5.26.1-6ubuntu0.6) ...
 Setting up libfile-fcntllock-perl (0.22-3build2) ...
 Setting up libalgorithm-diff-perl (1.19.03-1) ...
@@ -728,11 +728,11 @@ update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mo
 update-alternatives: warning: skip creation of /usr/share/man/man1/c++.1.gz because associated file /usr/share/man/man1/g++.1.gz (of link group c++) doesn't exist
 Setting up dirmngr (2.2.4-1ubuntu1.6) ...
 Setting up build-essential (12.4ubuntu1) ...
-Setting up libcurl3-gnutls:amd64 (7.58.0-2ubuntu3.23) ...
-Setting up libcurl4:amd64 (7.58.0-2ubuntu3.23) ...
+Setting up libcurl3-gnutls:amd64 (7.58.0-2ubuntu3.24) ...
+Setting up libcurl4:amd64 (7.58.0-2ubuntu3.24) ...
 Setting up gpg-wks-client (2.2.4-1ubuntu1.6) ...
-Setting up git (1:2.17.1-1ubuntu0.16) ...
-Setting up curl (7.58.0-2ubuntu3.23) ...
+Setting up git (1:2.17.1-1ubuntu0.17) ...
+Setting up curl (7.58.0-2ubuntu3.24) ...
 Setting up gnupg (2.2.4-1ubuntu1.6) ...
 Processing triggers for libc-bin (2.27-3ubuntu1.6) ...
 Processing triggers for ca-certificates (20211016ubuntu0.18.04.1) ...
@@ -740,30 +740,30 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container 911c6e8a9a3c
- ---> 4923344a681b
+Removing intermediate container 84d234a22034
+ ---> 46517844b7c5
 Step 5/30 : LABEL VERSION ="1.0"
- ---> Running in 904e630d6545
-Removing intermediate container 904e630d6545
- ---> 630db171a6e2
+ ---> Running in 914a145439f3
+Removing intermediate container 914a145439f3
+ ---> 2cd2a82d743a
 Step 6/30 : LABEL DESCRIPTION ="Docker Image To build Shim 15.07 for AmZetta Technologies."
- ---> Running in 316ff7b7945b
-Removing intermediate container 316ff7b7945b
- ---> cf12f3c7f1e1
+ ---> Running in d220974fa5a3
+Removing intermediate container d220974fa5a3
+ ---> a06c7493784b
 Step 7/30 : WORKDIR /opt
- ---> Running in df9965719f7a
-Removing intermediate container df9965719f7a
- ---> 895627b37ba9
+ ---> Running in 23ec874be750
+Removing intermediate container 23ec874be750
+ ---> 53df9ba78789
 Step 8/30 : RUN curl -L -O https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2
- ---> Running in 3f16d5c76c8d
+ ---> Running in 3569b244942a
 [91m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
+                                 Dload  Upload   Total   Spen[0m[91mt    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[0m[91m 17 1303k   17  223k    0     0   577k      0  0:00:02 --:--:--  0:00:02  577k[0m[91m100 1303k  100 1303k    0     0  3250k      0 --:--:-- --:--:-- --:--:-- 87.8M
-[0mRemoving intermediate container 3f16d5c76c8d
- ---> 1c40fa8a3dd6
+[0m[91m100 1303k  100 1303k    0     0  3466k      0 --:--:-- --:--:-- --:--:-- 3466k
+[0mRemoving intermediate container 3569b244942a
+ ---> 3085b17ea5e4
 Step 9/30 : RUN tar -xvjf shim-15.7.tar.bz2
- ---> Running in 57febea25bff
+ ---> Running in 93bf91539abc
 shim-15.7/
 shim-15.7/.clang-format
 shim-15.7/.github/
@@ -1840,26 +1840,26 @@ shim-15.7/testplan.txt
 shim-15.7/tpm.c
 shim-15.7/version.c.in
 shim-15.7/version.h
-Removing intermediate container 57febea25bff
- ---> 5f733a18e9d9
+Removing intermediate container 93bf91539abc
+ ---> 6f73e26ff7f7
 Step 10/30 : WORKDIR /opt/shim-15.7
- ---> Running in ffbbe404c939
-Removing intermediate container ffbbe404c939
- ---> 1b4cb62c0c9e
+ ---> Running in 448c7db1192f
+Removing intermediate container 448c7db1192f
+ ---> 18639512e07c
 Step 11/30 : COPY *.patch /opt/shim-15.7/
- ---> 4ef6cc8fc425
+ ---> 31b9825d53d7
 Step 12/30 : RUN git apply 530.patch
- ---> Running in cedcce0379ab
-Removing intermediate container cedcce0379ab
- ---> fdee8b194b57
+ ---> Running in 1780f4d68d10
+Removing intermediate container 1780f4d68d10
+ ---> a1a973ac3784
 Step 13/30 : COPY sbat.amzetta.csv /opt/shim-15.7/data
- ---> 9207b6901b48
+ ---> 7313996e75e3
 Step 14/30 : COPY amzetta.der /opt/shim-15.7/
- ---> fd51897e99b7
+ ---> 3458f94f1122
 Step 15/30 : COPY shimx64.efi /opt/shim-15.7/
- ---> d91ade2d5229
+ ---> 9c6b99b7a8a0
 Step 16/30 : RUN objdump -s -j .sbat shimx64.efi
- ---> Running in d7339447d05c
+ ---> Running in 8bd1468f9550
 
 shimx64.efi:     file format pei-x86-64
 
@@ -1873,30 +1873,30 @@ Contents of section .sbat:
  d1060 6d2c312c 68747470 733a2f2f 67697468  m,1,https://gith
  d1070 75622e63 6f6d2f72 68626f6f 742f7368  ub.com/rhboot/sh
  d1080 696d0a73 68696d2e 616d7a65 7474612c  im.shim.amzetta,
- d1090 332c416d 5a657474 61205465 63686e6f  3,AmZetta Techno
+ d1090 312c416d 5a657474 61205465 63686e6f  1,AmZetta Techno
  d10a0 6c6f6769 65732c73 68696d2c 31352e37  logies,shim,15.7
  d10b0 2c687474 70733a2f 2f616d7a 65747461  ,https://amzetta
  d10c0 2e636f6d 2f0a                        .com/.          
-Removing intermediate container d7339447d05c
- ---> 3a3c6d82a18f
+Removing intermediate container 8bd1468f9550
+ ---> 1845dc3aec6e
 Step 17/30 : RUN objdump -s -j .sbat shimx64.efi > original_sbatdump
- ---> Running in 525fb48fd600
-Removing intermediate container 525fb48fd600
- ---> 6b2e91219d6c
+ ---> Running in c78925128d7f
+Removing intermediate container c78925128d7f
+ ---> 6888ba28f103
 Step 18/30 : RUN sha256sum shimx64.efi > original_shim_hash
- ---> Running in 464e73baa21f
-Removing intermediate container 464e73baa21f
- ---> a8bc3faafc5f
+ ---> Running in 5251df9d7363
+Removing intermediate container 5251df9d7363
+ ---> ba689f38c8ae
 Step 19/30 : RUN hexdump -Cv shimx64.efi > original_shim_hexdump
- ---> Running in 3d5049148d02
-Removing intermediate container 3d5049148d02
- ---> f2c19b1b3238
+ ---> Running in 28a188f6806d
+Removing intermediate container 28a188f6806d
+ ---> 20c58abe1aaf
 Step 20/30 : RUN cp shimx64.efi shimx64.efi.orig
- ---> Running in f390b2cf3314
-Removing intermediate container f390b2cf3314
- ---> 64badd74e30c
+ ---> Running in dec0dd8ceab8
+Removing intermediate container dec0dd8ceab8
+ ---> ea2d497d89f9
 Step 21/30 : RUN make VENDOR_CERT_FILE=amzetta.der
- ---> Running in a814066c8891
+ ---> Running in d61d9ae10659
 sed	-e "s,@@VERSION@@,15.7," \
 	-e "s,@@UNAME@@,Linux x86_64 x86_64 x86_64 GNU/Linux," \
 	-e "s,@@COMMIT@@,11491619f4336fef41c3519877ba242161763580," \
@@ -2465,7 +2465,7 @@ make[2]: Entering directory '/opt/shim-15.7/gnu-efi/x86_64/gnuefi'
 gcc -I/opt/shim-15.7/gnu-efi//gnuefi -I/opt/shim-15.7/gnu-efi/inc -I/opt/shim-15.7/gnu-efi/inc/x86_64 -I/opt/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /opt/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /opt/shim-15.7/gnu-efi//gnuefi/crt0-efi-x86_64.S -o crt0-efi-x86_64.o
 gcc -I/opt/shim-15.7/gnu-efi//gnuefi -I/opt/shim-15.7/gnu-efi/inc -I/opt/shim-15.7/gnu-efi/inc/x86_64 -I/opt/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /opt/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /opt/shim-15.7/gnu-efi//gnuefi/reloc_x86_64.c -o reloc_x86_64.o
 gcc-ar rv -U libgnuefi.a reloc_x86_64.o
-[91m/usr/bin/ar: [0m[91mcreating libgnuefi.a
+[91m/usr/bin/ar: creating libgnuefi.a
 [0ma - reloc_x86_64.o
 make[2]: Leaving directory '/opt/shim-15.7/gnu-efi/x86_64/gnuefi'
 mkdir -p /opt/shim-15.7/gnu-efi/x86_64/inc
@@ -2483,7 +2483,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-x86_64 shimx64.so shimx64.efi
 ./post-process-pe -vv  shimx64.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x000e9668 to 0x000e9768
+fix_checksum():413: Updating checksum from 0x000e9666 to 0x000e9766
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -2521,7 +2521,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-x86_64 mmx64.so mmx64.efi
 ./post-process-pe -vv  mmx64.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x000d5201 to 0x000d5301
+fix_checksum():413: Updating checksum from 0x000d51ff to 0x000d52ff
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame \
@@ -2529,11 +2529,11 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-x86_64 fbx64.so fbx64.efi
 ./post-process-pe -vv  fbx64.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x0001b98f to 0x0001ba8f
-Removing intermediate container a814066c8891
- ---> e1732badc0b1
+fix_checksum():413: Updating checksum from 0x0001b98d to 0x0001ba8d
+Removing intermediate container d61d9ae10659
+ ---> 7ba29d3bba6d
 Step 22/30 : RUN objdump -s -j .sbat shimx64.efi
- ---> Running in a22e68577af9
+ ---> Running in cb386be2e9b6
 
 shimx64.efi:     file format pei-x86-64
 
@@ -2547,45 +2547,45 @@ Contents of section .sbat:
  d1060 6d2c312c 68747470 733a2f2f 67697468  m,1,https://gith
  d1070 75622e63 6f6d2f72 68626f6f 742f7368  ub.com/rhboot/sh
  d1080 696d0a73 68696d2e 616d7a65 7474612c  im.shim.amzetta,
- d1090 332c416d 5a657474 61205465 63686e6f  3,AmZetta Techno
+ d1090 312c416d 5a657474 61205465 63686e6f  1,AmZetta Techno
  d10a0 6c6f6769 65732c73 68696d2c 31352e37  logies,shim,15.7
  d10b0 2c687474 70733a2f 2f616d7a 65747461  ,https://amzetta
  d10c0 2e636f6d 2f0a                        .com/.          
-Removing intermediate container a22e68577af9
- ---> 92141397cb14
+Removing intermediate container cb386be2e9b6
+ ---> 9c0ba2388bb3
 Step 23/30 : RUN objdump -s -j .sbat shimx64.efi > builded_sbatdump
- ---> Running in 74825c34810e
-Removing intermediate container 74825c34810e
- ---> 8712b0be994f
+ ---> Running in f40acf00a2b6
+Removing intermediate container f40acf00a2b6
+ ---> e4daa428c4eb
 Step 24/30 : RUN sha256sum shimx64.efi > builded_shim_hash
- ---> Running in 74bb7b1827d8
-Removing intermediate container 74bb7b1827d8
- ---> 055a5e162e38
+ ---> Running in b6d2613b721f
+Removing intermediate container b6d2613b721f
+ ---> fba4bb9d029f
 Step 25/30 : RUN hexdump -Cv shimx64.efi > builded_shim_hexdump
- ---> Running in cb2ffcdbbef8
-Removing intermediate container cb2ffcdbbef8
- ---> 1c3db20e5bc9
+ ---> Running in edea288b7423
+Removing intermediate container edea288b7423
+ ---> 30cc053a1aa7
 Step 26/30 : RUN cat builded_shim_hash
- ---> Running in 6efea75be793
-0e35fd08db817724c44e641f7048e02addf440e5a5e299fff286e9b7e972e8d2  shimx64.efi
-Removing intermediate container 6efea75be793
- ---> 04282961b7c2
+ ---> Running in c31fd719586c
+018abfb7d89b0063d7e49a13bbc99fc3a7809adb21a3985ee6588a9ae13b863c  shimx64.efi
+Removing intermediate container c31fd719586c
+ ---> 33431bea2bd0
 Step 27/30 : RUN cat original_shim_hash
- ---> Running in 42cdc5a989d0
-0e35fd08db817724c44e641f7048e02addf440e5a5e299fff286e9b7e972e8d2  shimx64.efi
-Removing intermediate container 42cdc5a989d0
- ---> 996d9b70cd74
+ ---> Running in ec966de869c5
+018abfb7d89b0063d7e49a13bbc99fc3a7809adb21a3985ee6588a9ae13b863c  shimx64.efi
+Removing intermediate container ec966de869c5
+ ---> f4377d0e0dd5
 Step 28/30 : RUN diff builded_shim_hash original_shim_hash
- ---> Running in 3cf8b10b4ca2
-Removing intermediate container 3cf8b10b4ca2
- ---> 6ba451d64e39
+ ---> Running in 720256e56894
+Removing intermediate container 720256e56894
+ ---> 14aa9dbcf00c
 Step 29/30 : RUN diff builded_shim_hexdump original_shim_hexdump
- ---> Running in 9e290fd648ad
-Removing intermediate container 9e290fd648ad
- ---> af3a41de39c2
+ ---> Running in 833749984e19
+Removing intermediate container 833749984e19
+ ---> 55c2a69cb737
 Step 30/30 : RUN diff builded_sbatdump original_sbatdump
- ---> Running in f63e6c31c47f
-Removing intermediate container f63e6c31c47f
- ---> a7a9a33b194e
-Successfully built a7a9a33b194e
+ ---> Running in a2fc08cf275b
+Removing intermediate container a2fc08cf275b
+ ---> 86394b57d865
+Successfully built 86394b57d865
 Successfully tagged shim-build:latest
