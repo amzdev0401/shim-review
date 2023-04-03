@@ -130,12 +130,12 @@ This matches https://github.com/rhboot/shim/releases/tag/15.7 and contains the a
 SHIM:
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.amzetta,3,AmZetta Technologies,shim,15.7,https://amzetta.com/
+shim.amzetta,1,AmZetta Technologies,shim,15.7,https://amzetta.com/
 
 GRUB:
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
-grub.amzetta,3,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
+grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 ]
 
 *******************************************************************************
@@ -150,7 +150,11 @@ grub.amzetta,3,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 ### Is upstream commit [75b0cea7bf307f362057cc778efe89af4c615354 "ACPI: configfs: Disallow loading ACPI tables when locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
 ### Is upstream commit [eadb2f47a3ced5c64b23b90fd2a3463f63726066 "lockdown: also lock down previous kgdb use"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=eadb2f47a3ced5c64b23b90fd2a3463f63726066) applied?
 *******************************************************************************
-[1957a85b0032a81e6482ca4aab883643b8dae06e: Yes 75b0cea7bf307f362057cc778efe89af4c615354: Yes eadb2f47a3ced5c64b23b90fd2a3463f63726066: No ( CONFIG_DEBUG_KERNEL flag is not enabled in our linux kernel)]
+[
+1957a85b0032a81e6482ca4aab883643b8dae06e: Yes 
+75b0cea7bf307f362057cc778efe89af4c615354: Yes 
+eadb2f47a3ced5c64b23b90fd2a3463f63726066: No ( CONFIG_DEBUG_KERNEL flag is not enabled in our linux kernel)
+]
 
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
@@ -206,15 +210,16 @@ This should include logs for creating the buildroots, applying patches, doing th
 ### Please provide exact SBAT entries for all SBAT binaries you are booting or planning to boot directly through shim.
 ### Where your code is only slightly modified from an upstream vendor's, please also preserve their SBAT entries to simplify revocation.
 *******************************************************************************
-[SHIM:
+[
+SHIM:
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.amzetta,3,AmZetta Technologies,shim,15.7,https://amzetta.com/
+shim.amzetta,1,AmZetta Technologies,shim,15.7,https://amzetta.com/
 
 GRUB:
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
-grub.amzetta,3,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
+grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 ]
 
 *******************************************************************************
