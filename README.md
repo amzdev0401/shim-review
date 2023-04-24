@@ -84,7 +84,7 @@ This matches https://github.com/rhboot/shim/releases/tag/15.7 and contains the a
 *******************************************************************************
 ### What patches are being applied and why:
 *******************************************************************************
-[1. Enable the NX compatibility flag by default. #530  (530.patch)]
+[1. Enable the NX compatibility flag by default. #530  (530.patch) 2. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)]
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
@@ -193,7 +193,7 @@ This should include logs for creating the buildroots, applying patches, doing th
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-[018abfb7d89b0063d7e49a13bbc99fc3a7809adb21a3985ee6588a9ae13b863c  shimx64.efi]
+[ce63ec2309bd02048a3563a0c8acb5bdc9c302de4f9b7a74c9ffd01737c018bc  shimx64.efi]
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
