@@ -16,6 +16,7 @@ WORKDIR /opt/shim-15.7
 # Copy patch and other binaries to docker
 COPY *.patch /opt/shim-15.7/
 RUN git apply 530.patch
+RUN git apply 535.patch
 COPY sbat.amzetta.csv /opt/shim-15.7/data
 COPY amzetta.der /opt/shim-15.7/
 COPY shimx64.efi /opt/shim-15.7/
@@ -23,11 +24,11 @@ COPY shimx64.efi /opt/shim-15.7/
 # Collect original SHIM data
 RUN objdump -s -j .sbat shimx64.efi
 RUN objdump -s -j .sbat shimx64.efi > original_sbatdump
+RUN objdump -s -j .sbatlevel shimx64.efi > original_sbatlevel
 RUN sha256sum shimx64.efi > original_shim_hash
 RUN hexdump -Cv shimx64.efi > original_shim_hexdump
 
 RUN cp shimx64.efi shimx64.efi.orig 
-
 
 # Build the Amzetta SHIM from scratch
 RUN make VENDOR_CERT_FILE=amzetta.der
@@ -35,14 +36,20 @@ RUN make VENDOR_CERT_FILE=amzetta.der
 # Collect compiled SHIM data
 RUN objdump -s -j .sbat shimx64.efi
 RUN objdump -s -j .sbat shimx64.efi > builded_sbatdump
+RUN objdump -s -j .sbatlevel shimx64.efi > builded_sbatlevel
 RUN sha256sum shimx64.efi > builded_shim_hash
 RUN hexdump -Cv shimx64.efi > builded_shim_hexdump
 
-# Display builded shim and original shim
+# Display hash builded shim and original shim
 RUN cat builded_shim_hash
 RUN cat original_shim_hash
+
+# Display sbat level builded shim and original shim
+RUN cat builded_sbatlevel
+RUN cat original_sbatlevel
 
 # Compare the SHIM content 
 RUN diff builded_shim_hash original_shim_hash
 RUN diff builded_shim_hexdump original_shim_hexdump
 RUN diff builded_sbatdump original_sbatdump
+RUN diff builded_sbatlevel original_sbatlevel

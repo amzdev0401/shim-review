@@ -1,36 +1,36 @@
-Sending build context to Docker daemon    2.1MB
-Step 1/30 : FROM ubuntu:18.04
+Sending build context to Docker daemon  91.84MB
+Step 1/36 : FROM ubuntu:18.04
  ---> 5d2df19066ac
-Step 2/30 : LABEL MAINTAINER AmZetta Technologies <sales@amzetta.com>
- ---> Running in 718be75bbb4f
-Removing intermediate container 718be75bbb4f
- ---> bf0eb117c247
-Step 3/30 : RUN apt-get update
- ---> Running in 9651b51a04bc
+Step 2/36 : LABEL MAINTAINER AmZetta Technologies <sales@amzetta.com>
+ ---> Running in 6ef710b6699e
+Removing intermediate container 6ef710b6699e
+ ---> a8ca23434cf1
+Step 3/36 : RUN apt-get update
+ ---> Running in 8ccee9457188
 Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
 Get:2 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
-Get:3 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1496 kB]
+Get:3 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1618 kB]
 Get:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
 Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [83.3 kB]
-Get:6 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
-Get:7 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.7 kB]
-Get:8 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [3243 kB]
-Get:9 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
-Get:10 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
-Get:11 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1613 kB]
-Get:12 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
-Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2387 kB]
-Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3665 kB]
-Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [30.8 kB]
-Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1537 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:7 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [3270 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [1546 kB]
+Get:9 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [23.8 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2392 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [30.8 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1587 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3691 kB]
 Get:17 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [20.6 kB]
 Get:18 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [64.0 kB]
-Fetched 27.5 MB in 2s (11.1 MB/s)
+Fetched 27.6 MB in 3s (10.2 MB/s)
 Reading package lists...
-Removing intermediate container 9651b51a04bc
- ---> 88c3b284dcc8
-Step 4/30 : RUN apt-get install -y build-essential git curl bsdmainutils wget dos2unix
- ---> Running in 84d234a22034
+Removing intermediate container 8ccee9457188
+ ---> 4871717fbd21
+Step 4/36 : RUN apt-get install -y build-essential git curl bsdmainutils wget dos2unix
+ ---> Running in 95eb04b73137
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -92,7 +92,7 @@ The following NEW packages will be installed:
   manpages-dev multiarch-support netbase openssh-client openssl patch perl
   perl-modules-5.26 pinentry-curses publicsuffix readline-common wget xauth
   xz-utils
-0 upgraded, 119 newly installed, 0 to remove and 7 not upgraded.
+0 upgraded, 119 newly installed, 0 to remove and 9 not upgraded.
 Need to get 67.0 MB of archives.
 After this operation, 282 MB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu bionic/main amd64 liblocale-gettext-perl amd64 1.07-3build2 [16.6 kB]
@@ -140,7 +140,7 @@ Get:42 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libbinutils am
 Get:43 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.30-21ubuntu1~18.04.8 [1839 kB]
 Get:44 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils amd64 2.30-21ubuntu1~18.04.8 [3388 B]
 Get:45 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc-dev-bin amd64 2.27-3ubuntu1.6 [71.9 kB]
-Get:46 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-libc-dev amd64 4.15.0-208.220 [997 kB]
+Get:46 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-libc-dev amd64 4.15.0-209.220 [993 kB]
 Get:47 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc6-dev amd64 2.27-3ubuntu1.6 [2587 kB]
 Get:48 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gcc-7-base amd64 7.5.0-3ubuntu1~18.04 [18.3 kB]
 Get:49 http://archive.ubuntu.com/ubuntu bionic/main amd64 libisl19 amd64 0.19-1 [551 kB]
@@ -215,7 +215,7 @@ Get:117 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsasl2-modu
 Get:118 http://archive.ubuntu.com/ubuntu bionic/main amd64 manpages-dev all 4.15-1 [2217 kB]
 Get:119 http://archive.ubuntu.com/ubuntu bionic/universe amd64 dos2unix amd64 7.3.4-3 [351 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 67.0 MB in 27s (2452 kB/s)
+[0mFetched 67.0 MB in 16s (4128 kB/s)
 Selecting previously unselected package liblocale-gettext-perl.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4051 files and directories currently installed.)
 Preparing to unpack .../0-liblocale-gettext-perl_1.07-3build2_amd64.deb ...
@@ -355,8 +355,8 @@ Selecting previously unselected package libc-dev-bin.
 Preparing to unpack .../036-libc-dev-bin_2.27-3ubuntu1.6_amd64.deb ...
 Unpacking libc-dev-bin (2.27-3ubuntu1.6) ...
 Selecting previously unselected package linux-libc-dev:amd64.
-Preparing to unpack .../037-linux-libc-dev_4.15.0-208.220_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (4.15.0-208.220) ...
+Preparing to unpack .../037-linux-libc-dev_4.15.0-209.220_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.15.0-209.220) ...
 Selecting previously unselected package libc6-dev:amd64.
 Preparing to unpack .../038-libc6-dev_2.27-3ubuntu1.6_amd64.deb ...
 Unpacking libc6-dev:amd64 (2.27-3ubuntu1.6) ...
@@ -601,7 +601,7 @@ Setting up libreadline7:amd64 (7.0-3) ...
 Setting up libpsl5:amd64 (0.19.1-5build1) ...
 Setting up libtsan0:amd64 (8.4.0-1ubuntu1~18.04) ...
 Setting up libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2.4) ...
-Setting up linux-libc-dev:amd64 (4.15.0-208.220) ...
+Setting up linux-libc-dev:amd64 (4.15.0-209.220) ...
 Setting up libmpfr6:amd64 (4.0.1-1) ...
 Setting up libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2.4) ...
 Setting up dos2unix (7.3.4-3) ...
@@ -740,30 +740,30 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container 84d234a22034
- ---> 46517844b7c5
-Step 5/30 : LABEL VERSION ="1.0"
- ---> Running in 914a145439f3
-Removing intermediate container 914a145439f3
- ---> 2cd2a82d743a
-Step 6/30 : LABEL DESCRIPTION ="Docker Image To build Shim 15.07 for AmZetta Technologies."
- ---> Running in d220974fa5a3
-Removing intermediate container d220974fa5a3
- ---> a06c7493784b
-Step 7/30 : WORKDIR /opt
- ---> Running in 23ec874be750
-Removing intermediate container 23ec874be750
- ---> 53df9ba78789
-Step 8/30 : RUN curl -L -O https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2
- ---> Running in 3569b244942a
+Removing intermediate container 95eb04b73137
+ ---> 171e7f1458fc
+Step 5/36 : LABEL VERSION ="1.0"
+ ---> Running in f095c6c4db95
+Removing intermediate container f095c6c4db95
+ ---> 3e223644e02b
+Step 6/36 : LABEL DESCRIPTION ="Docker Image To build Shim 15.07 for AmZetta Technologies."
+ ---> Running in 389fb1bc838f
+Removing intermediate container 389fb1bc838f
+ ---> 895168c0c9e1
+Step 7/36 : WORKDIR /opt
+ ---> Running in c4c2366d6547
+Removing intermediate container c4c2366d6547
+ ---> afee5a3039b5
+Step 8/36 : RUN curl -L -O https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2
+ ---> Running in 86ac7c4cb2b2
 [91m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spen[0m[91mt    Left  Speed
+                                 Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[0m[91m100 1303k  100 1303k    0     0  3466k      0 --:--:-- --:--:-- --:--:-- 3466k
-[0mRemoving intermediate container 3569b244942a
- ---> 3085b17ea5e4
-Step 9/30 : RUN tar -xvjf shim-15.7.tar.bz2
- ---> Running in 93bf91539abc
+[0m[91m100 1303k  100 1303k    0     0  2591k      0 --:--:-- --:--:-- --:--:-- 2591k
+[0mRemoving intermediate container 86ac7c4cb2b2
+ ---> 420341f76b9e
+Step 9/36 : RUN tar -xvjf shim-15.7.tar.bz2
+ ---> Running in 3838aeb7016d
 shim-15.7/
 shim-15.7/.clang-format
 shim-15.7/.github/
@@ -1840,26 +1840,30 @@ shim-15.7/testplan.txt
 shim-15.7/tpm.c
 shim-15.7/version.c.in
 shim-15.7/version.h
-Removing intermediate container 93bf91539abc
- ---> 6f73e26ff7f7
-Step 10/30 : WORKDIR /opt/shim-15.7
- ---> Running in 448c7db1192f
-Removing intermediate container 448c7db1192f
- ---> 18639512e07c
-Step 11/30 : COPY *.patch /opt/shim-15.7/
- ---> 31b9825d53d7
-Step 12/30 : RUN git apply 530.patch
- ---> Running in 1780f4d68d10
-Removing intermediate container 1780f4d68d10
- ---> a1a973ac3784
-Step 13/30 : COPY sbat.amzetta.csv /opt/shim-15.7/data
- ---> 7313996e75e3
-Step 14/30 : COPY amzetta.der /opt/shim-15.7/
- ---> 3458f94f1122
-Step 15/30 : COPY shimx64.efi /opt/shim-15.7/
- ---> 9c6b99b7a8a0
-Step 16/30 : RUN objdump -s -j .sbat shimx64.efi
- ---> Running in 8bd1468f9550
+Removing intermediate container 3838aeb7016d
+ ---> d60c3c715cff
+Step 10/36 : WORKDIR /opt/shim-15.7
+ ---> Running in 6bc5bbcf1c5a
+Removing intermediate container 6bc5bbcf1c5a
+ ---> 9bd35cf5cb3b
+Step 11/36 : COPY *.patch /opt/shim-15.7/
+ ---> f4ac9e4da023
+Step 12/36 : RUN git apply 530.patch
+ ---> Running in fb0698836983
+Removing intermediate container fb0698836983
+ ---> 387ed3b02fde
+Step 13/36 : RUN git apply 535.patch
+ ---> Running in 9f6a023f242a
+Removing intermediate container 9f6a023f242a
+ ---> 12911a129456
+Step 14/36 : COPY sbat.amzetta.csv /opt/shim-15.7/data
+ ---> db9a15db8579
+Step 15/36 : COPY amzetta.der /opt/shim-15.7/
+ ---> 5f53fb162634
+Step 16/36 : COPY shimx64.efi /opt/shim-15.7/
+ ---> 23fffc0274cc
+Step 17/36 : RUN objdump -s -j .sbat shimx64.efi
+ ---> Running in 3cee3dc2eaa1
 
 shimx64.efi:     file format pei-x86-64
 
@@ -1877,26 +1881,30 @@ Contents of section .sbat:
  d10a0 6c6f6769 65732c73 68696d2c 31352e37  logies,shim,15.7
  d10b0 2c687474 70733a2f 2f616d7a 65747461  ,https://amzetta
  d10c0 2e636f6d 2f0a                        .com/.          
-Removing intermediate container 8bd1468f9550
- ---> 1845dc3aec6e
-Step 17/30 : RUN objdump -s -j .sbat shimx64.efi > original_sbatdump
- ---> Running in c78925128d7f
-Removing intermediate container c78925128d7f
- ---> 6888ba28f103
-Step 18/30 : RUN sha256sum shimx64.efi > original_shim_hash
- ---> Running in 5251df9d7363
-Removing intermediate container 5251df9d7363
- ---> ba689f38c8ae
-Step 19/30 : RUN hexdump -Cv shimx64.efi > original_shim_hexdump
- ---> Running in 28a188f6806d
-Removing intermediate container 28a188f6806d
- ---> 20c58abe1aaf
-Step 20/30 : RUN cp shimx64.efi shimx64.efi.orig
- ---> Running in dec0dd8ceab8
-Removing intermediate container dec0dd8ceab8
- ---> ea2d497d89f9
-Step 21/30 : RUN make VENDOR_CERT_FILE=amzetta.der
- ---> Running in d61d9ae10659
+Removing intermediate container 3cee3dc2eaa1
+ ---> 00ffe2031f7e
+Step 18/36 : RUN objdump -s -j .sbat shimx64.efi > original_sbatdump
+ ---> Running in a607a31c6307
+Removing intermediate container a607a31c6307
+ ---> 94b4b7c021ee
+Step 19/36 : RUN objdump -s -j .sbatlevel shimx64.efi > original_sbatlevel
+ ---> Running in bd83a9046228
+Removing intermediate container bd83a9046228
+ ---> e554e143c82c
+Step 20/36 : RUN sha256sum shimx64.efi > original_shim_hash
+ ---> Running in ee7552b498a3
+Removing intermediate container ee7552b498a3
+ ---> 74c25e726e5a
+Step 21/36 : RUN hexdump -Cv shimx64.efi > original_shim_hexdump
+ ---> Running in 20d3512d1c93
+Removing intermediate container 20d3512d1c93
+ ---> 81fba36e6863
+Step 22/36 : RUN cp shimx64.efi shimx64.efi.orig
+ ---> Running in 8b92ab80d399
+Removing intermediate container 8b92ab80d399
+ ---> efb63e621f7a
+Step 23/36 : RUN make VENDOR_CERT_FILE=amzetta.der
+ ---> Running in aeda78551bc7
 sed	-e "s,@@VERSION@@,15.7," \
 	-e "s,@@UNAME@@,Linux x86_64 x86_64 x86_64 GNU/Linux," \
 	-e "s,@@COMMIT@@,11491619f4336fef41c3519877ba242161763580," \
@@ -1912,9 +1920,9 @@ gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -f
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim-15.7/Cryptlib -I/opt/shim-15.7/Cryptlib/Include -I/opt/shim-15.7/gnu-efi/inc -I/opt/shim-15.7/gnu-efi/inc/x86_64 -I/opt/shim-15.7/gnu-efi/inc/protocol -I/opt/shim-15.7/include -iquote /opt/shim-15.7 -iquote /opt/shim-15.7 -isystem /opt/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.7/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o errlog.o errlog.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim-15.7/Cryptlib -I/opt/shim-15.7/Cryptlib/Include -I/opt/shim-15.7/gnu-efi/inc -I/opt/shim-15.7/gnu-efi/inc/x86_64 -I/opt/shim-15.7/gnu-efi/inc/protocol -I/opt/shim-15.7/include -iquote /opt/shim-15.7 -iquote /opt/shim-15.7 -isystem /opt/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.7/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o sbat.o sbat.c
 dos2unix -r -l -F -f -n data/sbat.amzetta.csv sbat.amzetta.csv
+tail -c1 sbat.amzetta.csv | read -r _ || echo >> sbat.amzetta.csv # ensure a trailing newline
 [91mdos2unix: converting file data/sbat.amzetta.csv to file sbat.amzetta.csv in Unix format...
-[0mtail -c1 sbat.amzetta.csv | read -r _ || echo >> sbat.amzetta.csv # ensure a trailing newline
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim-15.7/Cryptlib -I/opt/shim-15.7/Cryptlib/Include -I/opt/shim-15.7/gnu-efi/inc -I/opt/shim-15.7/gnu-efi/inc/x86_64 -I/opt/shim-15.7/gnu-efi/inc/protocol -I/opt/shim-15.7/include -iquote /opt/shim-15.7 -iquote /opt/shim-15.7 -isystem /opt/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.7/"' -DVENDOR_CERT_FILE=\"amzetta.der\" -x c -c -o sbat_data.o /dev/null
+[0mgcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim-15.7/Cryptlib -I/opt/shim-15.7/Cryptlib/Include -I/opt/shim-15.7/gnu-efi/inc -I/opt/shim-15.7/gnu-efi/inc/x86_64 -I/opt/shim-15.7/gnu-efi/inc/protocol -I/opt/shim-15.7/include -iquote /opt/shim-15.7 -iquote /opt/shim-15.7 -isystem /opt/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.7/"' -DVENDOR_CERT_FILE=\"amzetta.der\" -x c -c -o sbat_data.o /dev/null
 objcopy --add-section .sbat=/opt/shim-15.7/data/sbat.csv \
 	--set-section-flags .sbat=contents,alloc,load,readonly,data \
 	sbat_data.o
@@ -2483,7 +2491,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-x86_64 shimx64.so shimx64.efi
 ./post-process-pe -vv  shimx64.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x000e9666 to 0x000e9766
+fix_checksum():413: Updating checksum from 0x000eb43c to 0x000eb53c
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -2530,10 +2538,10 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 ./post-process-pe -vv  fbx64.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
 fix_checksum():413: Updating checksum from 0x0001b98d to 0x0001ba8d
-Removing intermediate container d61d9ae10659
- ---> 7ba29d3bba6d
-Step 22/30 : RUN objdump -s -j .sbat shimx64.efi
- ---> Running in cb386be2e9b6
+Removing intermediate container aeda78551bc7
+ ---> 08f4cfa1acad
+Step 24/36 : RUN objdump -s -j .sbat shimx64.efi
+ ---> Running in 9297a46030b5
 
 shimx64.efi:     file format pei-x86-64
 
@@ -2551,41 +2559,75 @@ Contents of section .sbat:
  d10a0 6c6f6769 65732c73 68696d2c 31352e37  logies,shim,15.7
  d10b0 2c687474 70733a2f 2f616d7a 65747461  ,https://amzetta
  d10c0 2e636f6d 2f0a                        .com/.          
-Removing intermediate container cb386be2e9b6
- ---> 9c0ba2388bb3
-Step 23/30 : RUN objdump -s -j .sbat shimx64.efi > builded_sbatdump
- ---> Running in f40acf00a2b6
-Removing intermediate container f40acf00a2b6
- ---> e4daa428c4eb
-Step 24/30 : RUN sha256sum shimx64.efi > builded_shim_hash
- ---> Running in b6d2613b721f
-Removing intermediate container b6d2613b721f
- ---> fba4bb9d029f
-Step 25/30 : RUN hexdump -Cv shimx64.efi > builded_shim_hexdump
- ---> Running in edea288b7423
-Removing intermediate container edea288b7423
- ---> 30cc053a1aa7
-Step 26/30 : RUN cat builded_shim_hash
- ---> Running in c31fd719586c
-018abfb7d89b0063d7e49a13bbc99fc3a7809adb21a3985ee6588a9ae13b863c  shimx64.efi
-Removing intermediate container c31fd719586c
- ---> 33431bea2bd0
-Step 27/30 : RUN cat original_shim_hash
- ---> Running in ec966de869c5
-018abfb7d89b0063d7e49a13bbc99fc3a7809adb21a3985ee6588a9ae13b863c  shimx64.efi
-Removing intermediate container ec966de869c5
- ---> f4377d0e0dd5
-Step 28/30 : RUN diff builded_shim_hash original_shim_hash
- ---> Running in 720256e56894
-Removing intermediate container 720256e56894
- ---> 14aa9dbcf00c
-Step 29/30 : RUN diff builded_shim_hexdump original_shim_hexdump
- ---> Running in 833749984e19
-Removing intermediate container 833749984e19
- ---> 55c2a69cb737
-Step 30/30 : RUN diff builded_sbatdump original_sbatdump
- ---> Running in a2fc08cf275b
-Removing intermediate container a2fc08cf275b
- ---> 86394b57d865
-Successfully built 86394b57d865
+Removing intermediate container 9297a46030b5
+ ---> f8c42e122222
+Step 25/36 : RUN objdump -s -j .sbat shimx64.efi > builded_sbatdump
+ ---> Running in 7b86a084e594
+Removing intermediate container 7b86a084e594
+ ---> fe033efb7b6b
+Step 26/36 : RUN objdump -s -j .sbatlevel shimx64.efi > builded_sbatlevel
+ ---> Running in aa4447734ca5
+Removing intermediate container aa4447734ca5
+ ---> 62a8c2a28a6b
+Step 27/36 : RUN sha256sum shimx64.efi > builded_shim_hash
+ ---> Running in 46bb495c1424
+Removing intermediate container 46bb495c1424
+ ---> bbc0aa0d3007
+Step 28/36 : RUN hexdump -Cv shimx64.efi > builded_shim_hexdump
+ ---> Running in daf7f04d3a88
+Removing intermediate container daf7f04d3a88
+ ---> 75c6032b65ff
+Step 29/36 : RUN cat builded_shim_hash
+ ---> Running in 2919245df926
+ce63ec2309bd02048a3563a0c8acb5bdc9c302de4f9b7a74c9ffd01737c018bc  shimx64.efi
+Removing intermediate container 2919245df926
+ ---> 58938123fd58
+Step 30/36 : RUN cat original_shim_hash
+ ---> Running in 4a597d98c3b4
+ce63ec2309bd02048a3563a0c8acb5bdc9c302de4f9b7a74c9ffd01737c018bc  shimx64.efi
+Removing intermediate container 4a597d98c3b4
+ ---> 7e3fb2131dc1
+Step 31/36 : RUN cat builded_sbatlevel
+ ---> Running in 16c326b0dea9
+
+shimx64.efi:     file format pei-x86-64
+
+Contents of section .sbatlevel:
+ 85000 00000000 08000000 22000000 73626174  ........"...sbat
+ 85010 2c312c32 30323230 35323430 300a6772  ,1,2022052400.gr
+ 85020 75622c32 0a007362 61742c31 2c323032  ub,2..sbat,1,202
+ 85030 32313131 3530300a 7368696d 2c320a67  2111500.shim,2.g
+ 85040 7275622c 330a00                      rub,3..         
+Removing intermediate container 16c326b0dea9
+ ---> 974db9da18a2
+Step 32/36 : RUN cat original_sbatlevel
+ ---> Running in 68d1e4fd7228
+
+shimx64.efi:     file format pei-x86-64
+
+Contents of section .sbatlevel:
+ 85000 00000000 08000000 22000000 73626174  ........"...sbat
+ 85010 2c312c32 30323230 35323430 300a6772  ,1,2022052400.gr
+ 85020 75622c32 0a007362 61742c31 2c323032  ub,2..sbat,1,202
+ 85030 32313131 3530300a 7368696d 2c320a67  2111500.shim,2.g
+ 85040 7275622c 330a00                      rub,3..         
+Removing intermediate container 68d1e4fd7228
+ ---> 4af9a4df0e74
+Step 33/36 : RUN diff builded_shim_hash original_shim_hash
+ ---> Running in b9ff0ad7e059
+Removing intermediate container b9ff0ad7e059
+ ---> b1b258c7b6f8
+Step 34/36 : RUN diff builded_shim_hexdump original_shim_hexdump
+ ---> Running in 7df26904abfc
+Removing intermediate container 7df26904abfc
+ ---> 323642d09729
+Step 35/36 : RUN diff builded_sbatdump original_sbatdump
+ ---> Running in 9d781314d7c6
+Removing intermediate container 9d781314d7c6
+ ---> 976da56a8bf9
+Step 36/36 : RUN diff builded_sbatlevel original_sbatlevel
+ ---> Running in 8de85ce8c3eb
+Removing intermediate container 8de85ce8c3eb
+ ---> a2a17798b776
+Successfully built a2a17798b776
 Successfully tagged shim-build:latest
