@@ -74,12 +74,12 @@ This matches https://github.com/rhboot/shim/releases/tag/15.7 and contains the a
 
 *******************************************************************************
 [SHIM Created from https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2. Following patch is applied.
- Patch : 1. Enable the NX compatibility flag by default. #530  (530.patch) ]
+ Patch : 1. Enable the NX compatibility flag by default. #530  (530.patch) 2. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)]
 
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
-[https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2 source code with only Amzetta Technologies certificate is embedded ]
+[https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2 source code with only Amzetta Technologies certificate is embedded]
 
 *******************************************************************************
 ### What patches are being applied and why:
@@ -183,7 +183,7 @@ eadb2f47a3ced5c64b23b90fd2a3463f63726066: No ( CONFIG_DEBUG_KERNEL flag is not e
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-[https://github.com/amzdev0401/shim-review/blob/AmZetta-shim-x86_64-20230225/build.log]
+[build.log]
 
 *******************************************************************************
 ### What changes were made since your SHIM was last signed?
