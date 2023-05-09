@@ -20,7 +20,7 @@ Here's the template:
 *******************************************************************************
 ### What organization or people are asking to have this signed?
 *******************************************************************************
-[your text here]
+[AmZetta Technologies AmZetta Technologies is a software developer providing secure endpoint solutions for companies and organizations worldwide. https://amzetta.com/products/ztc/]
 
 *******************************************************************************
 ### What product or service is this for?
