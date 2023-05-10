@@ -20,22 +20,22 @@ Here's the template:
 *******************************************************************************
 ### What organization or people are asking to have this signed?
 *******************************************************************************
-[AmZetta Technologies AmZetta Technologies is a software developer providing secure endpoint solutions for companies and organizations worldwide. https://amzetta.com/products/ztc/]
+AmZetta Technologies AmZetta Technologies is a software developer providing secure endpoint solutions for companies and organizations worldwide. https://amzetta.com/products/ztc/
 
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-[AmZetta zTC: Thin Client Endpoint Devices for Digital Workspaces, Citrix, Microsoft Hyper-V & WVD, VMware and other VDI and DaaS environments. AmZetta zTC Thin Clients are available in Linux and Windows operating system options and are designed to support all user types from call centers, students, office and remote users, manufacturing and high-end graphics users requiring CAD, HD Video/Audio and more. AmZetta zTC Thin Clients are preinstalled with the SnapOS operating system. The Snap Client Manager (SCM) software manages, monitors, and secures AmZetta zTC Thin Clients and SnapOS deployments from a single intuitive interface. Equip your organization with the agility to adapt without compromising power, compatibility, or security with the AmZetta zTC Thin Client product line. For More info: https://amzetta.com/ztc/]
+AmZetta zTC: Thin Client Endpoint Devices for Digital Workspaces, Citrix, Microsoft Hyper-V & WVD, VMware and other VDI and DaaS environments. AmZetta zTC Thin Clients are available in Linux and Windows operating system options and are designed to support all user types from call centers, students, office and remote users, manufacturing and high-end graphics users requiring CAD, HD Video/Audio and more. AmZetta zTC Thin Clients are preinstalled with the SnapOS operating system. The Snap Client Manager (SCM) software manages, monitors, and secures AmZetta zTC Thin Clients and SnapOS deployments from a single intuitive interface. Equip your organization with the agility to adapt without compromising power, compatibility, or security with the AmZetta zTC Thin Client product line. For More info: https://amzetta.com/ztc/
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
 *******************************************************************************
-[AmZetta Technologies customers would like to be able to run and deploy the SnapOS operating system without disabling Secure Boot. The customers are seeking a more secure Thin Client solution and want to utilize secure boot. The AmZetta zTC Thin Clients with SnapOS are deployed in financial, healthcare and government organizations that require secure boot as a main feature for added security.]
+AmZetta Technologies customers would like to be able to run and deploy the SnapOS operating system without disabling Secure Boot. The customers are seeking a more secure Thin Client solution and want to utilize secure boot. The AmZetta zTC Thin Clients with SnapOS are deployed in financial, healthcare and government organizations that require secure boot as a main feature for added security.
 
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
 *******************************************************************************
-[SnapOS is the customized operating system build from the scratch from Ubuntu source code based on the product feature requirements.]
+SnapOS is the customized operating system build from the scratch from Ubuntu source code based on the product feature requirements.
 
 *******************************************************************************
 ### Who is the primary contact for security updates, etc.?
@@ -73,22 +73,28 @@ Please create your shim binaries starting with the 15.7 shim release tar file: h
 This matches https://github.com/rhboot/shim/releases/tag/15.7 and contains the appropriate gnu-efi source.
 
 *******************************************************************************
-[SHIM Created from https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2. Following patch is applied. Patch : 1. Enable the NX compatibility flag by default. #530 (530.patch) 2. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)]
+SHIM Created from [https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2](https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2).
+
+Following patches are applied.
+
+1. Enable the NX compatibility flag by default. #530 (530.patch)
+2. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)
 
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
-[https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2 source code with only Amzetta Technologies certificate is embedded]
+[https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2](https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2) source code with only Amzetta Technologies certificate is embedded
 
 *******************************************************************************
 ### What patches are being applied and why:
 *******************************************************************************
-[1. Enable the NX compatibility flag by default. #530 (530.patch) 2. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)]
+1. Enable the NX compatibility flag by default. #530 (530.patch)
+2. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
 *******************************************************************************
-[Downstream RHEL/Fedora/Debian/Canonical-like implementation]
+Downstream RHEL/Fedora/Debian/Canonical-like implementation
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader and your previously released shim booted a version of grub affected by any of the CVEs in the July 2020 grub2 CVE list, the March 2021 grub2 CVE list, the June 7th 2022 grub2 CVE list, or the November 15th 2022 list, have fixes for all these CVEs been applied?
@@ -120,19 +126,24 @@ This matches https://github.com/rhboot/shim/releases/tag/15.7 and contains the a
 * CVE-2022-2601
 * CVE-2022-3775
 *******************************************************************************
-[This is the first time SHIM submission, We are going to use GRUB 2.11 with cherry picked from commit 65bc45963014773e2062ccc63ff34a089d2e352e for upcoming product line.]
+This is the first time SHIM submission, We are going to use GRUB 2.11 with cherry picked from commit 65bc45963014773e2062ccc63ff34a089d2e352e for upcoming product line.
 
 *******************************************************************************
 ### If these fixes have been applied, have you set the global SBAT generation on your GRUB binary to 3?
 *******************************************************************************
-[SHIM: sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim shim.amzetta,1,AmZetta Technologies,shim,15.7,https://amzetta.com/
- GRUB: sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/ grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/]
+Yes, as you can see
+
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
+grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
+```
 
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 *******************************************************************************
-[This is the first time SHIM submission, We are going to use GRUB 2.11 for upcoming product line.]
+This is the first time SHIM submission, We are going to use GRUB 2.11 for upcoming product line.
 
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
@@ -140,103 +151,127 @@ This matches https://github.com/rhboot/shim/releases/tag/15.7 and contains the a
 ### Is upstream commit [75b0cea7bf307f362057cc778efe89af4c615354 "ACPI: configfs: Disallow loading ACPI tables when locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
 ### Is upstream commit [eadb2f47a3ced5c64b23b90fd2a3463f63726066 "lockdown: also lock down previous kgdb use"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=eadb2f47a3ced5c64b23b90fd2a3463f63726066) applied?
 *******************************************************************************
-[1957a85b0032a81e6482ca4aab883643b8dae06e: Yes 75b0cea7bf307f362057cc778efe89af4c615354: Yes eadb2f47a3ced5c64b23b90fd2a3463f63726066: No ( CONFIG_DEBUG_KERNEL flag is not enabled in our linux kernel)]
+- 1957a85b0032a81e6482ca4aab883643b8dae06e: Yes
+- 75b0cea7bf307f362057cc778efe89af4c615354: Yes
+- eadb2f47a3ced5c64b23b90fd2a3463f63726066: No ( `CONFIG_DEBUG_KERNEL` flag is not enabled in our linux kernel)
 
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
-[No additional local patches applied in signed kernel]
+No additional local patches applied in signed kernel
 
 *******************************************************************************
 ### If you use vendor_db functionality of providing multiple certificates and/or hashes please briefly describe your certificate setup.
 ### If there are allow-listed hashes please provide exact binaries for which hashes are created via file sharing service, available in public with anonymous access for verification.
 *******************************************************************************
-[No, We don't use vendor_db functionality]
+No, We don't use `vendor_db` functionality
 
 *******************************************************************************
 ### If you are re-using a previously used (CA) certificate, you will need to add the hashes of the previous GRUB2 binaries exposed to the CVEs to vendor_dbx in shim in order to prevent GRUB2 from being able to chainload those older GRUB2 binaries. If you are changing to a new (CA) certificate, this does not apply.
 ### Please describe your strategy.
 *******************************************************************************
-[This is the first time SHIM submission, We are going to use GRUB2 2.11 for upcoming product line.]
+This is the first time SHIM submission, We are going to use GRUB2 2.11 for upcoming product line.
 
 *******************************************************************************
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 ### If the shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case and what the differences would be.
 *******************************************************************************
-[Ubuntu 18.04 or above with Docker, run make-shim.sh]
+Ubuntu 18.04 or above with Docker, run make-shim.sh
 
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-[build.log]
+[build.log](./build.log)
 
 *******************************************************************************
 ### What changes were made since your SHIM was last signed?
 *******************************************************************************
-[This is first time submission.]
+This is first time submission.
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-[ce63ec2309bd02048a3563a0c8acb5bdc9c302de4f9b7a74c9ffd01737c018bc shimx64.efi]
+ce63ec2309bd02048a3563a0c8acb5bdc9c302de4f9b7a74c9ffd01737c018bc shimx64.efi
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
 *******************************************************************************
-[Amzetta Technologies's private key stored in Hardware Security Module(YubiHSM). Only authorized engineering professional having the access to build the binaries and sigining (SHIM, GRUB2, Linux kernel and SnapOS software)]
+Amzetta Technologies's private key stored in Hardware Security Module(YubiHSM). Only authorized engineering professional having the access to build the binaries and sigining (SHIM, GRUB2, Linux kernel and SnapOS software)
 
 *******************************************************************************
 ### Do you use EV certificates as embedded certificates in the SHIM?
 *******************************************************************************
-[Yes]
+Yes
 
 *******************************************************************************
 ### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( grub2, fwupd, fwupdate, shim + all child shim binaries )?
 ### Please provide exact SBAT entries for all SBAT binaries you are booting or planning to boot directly through shim.
 ### Where your code is only slightly modified from an upstream vendor's, please also preserve their SBAT entries to simplify revocation.
 *******************************************************************************
-[SHIM: sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim shim.amzetta,1,AmZetta Technologies,shim,15.7,https://amzetta.com/
- GRUB: sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/ grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/ ]
+SHIM:
+
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.amzetta,1,AmZetta Technologies,shim,15.7,https://amzetta.com/
+```
+
+GRUB:
+
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
+grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
+```
 
 *******************************************************************************
 ### Which modules are built into your signed grub image?
 *******************************************************************************
-[Original source code has been used without any modification, compiled with only vendor-specific SBAT entry. https://github.com/rhboot/grub2.git with commit id 65bc45963014773e2062ccc63ff34a089d2e352e, dated Jan 29 19:49:33 2023.
+Original source code has been used without any modification, compiled with only vendor-specific SBAT entry. https://github.com/rhboot/grub2.git with commit id 65bc45963014773e2062ccc63ff34a089d2e352e, dated Jan 29 19:49:33 2023.
 
-Modules in signed grub: all_video boot btrfs cat chain configfile echo efifwsetup efinet ext2 fat font gettext gfxmenu gfxterm gfxterm_background gzio halt hfsplus iso9660 jpeg keystatus loadenv linux lsefi lsefimmap lssal lvm mdraid09 memdisk minicmd normal part_apple part_msdos part_gpt password_pbkdf2 reboot search search_fs_uuid search_fs_file search_label sleep test tftp video xzio lzopio gcry_dsa gcry_sha512 cmp eval true serial hashsum gcry_md5 gcry_rsa ]
+Modules in signed grub:
+
+```
+all_video boot btrfs cat chain configfile echo efifwsetup efinet ext2 fat font
+gettext gfxmenu gfxterm gfxterm_background gzio halt hfsplus iso9660 jpeg
+keystatus loadenv linux lsefi lsefimmap lssal lvm mdraid09 memdisk minicmd
+normal part_apple part_msdos part_gpt password_pbkdf2 reboot search
+search_fs_uuid search_fs_file search_label sleep test tftp video xzio lzopio
+gcry_dsa gcry_sha512 cmp eval true serial hashsum gcry_md5 gcry_rsa
+```
 
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB or other)?
 *******************************************************************************
-[GRUB2 git clone https://github.com/rhboot/grub2.git, commit 65bc45963014773e2062ccc63ff34a089d2e352e used, Jan 29 19:49:33 2023]
+GRUB2 git clone https://github.com/rhboot/grub2.git, commit 65bc45963014773e2062ccc63ff34a089d2e352e used, Jan 29 19:49:33 2023
 
 *******************************************************************************
 ### If your SHIM launches any other components, please provide further details on what is launched.
 *******************************************************************************
-[SHIM only launches signed GRUB2, then launches kernel]
+SHIM only launches signed GRUB2, then launches kernel
 
 *******************************************************************************
 ### If your GRUB2 launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
 *******************************************************************************
-[Linux kernel version 5.10 is used, SHIM will only launches signed GRUB AND Kernel, grub verifies signatures on booted kernel.]
+Linux kernel version 5.10 is used, SHIM will only launches signed GRUB AND Kernel, grub verifies signatures on booted kernel.
 
 *******************************************************************************
 ### How do the launched components prevent execution of unauthenticated code?
 *******************************************************************************
-[Kernel, Grub are updated with latest patch and all are signed with private key to prevent unsigned modules.]
+Kernel, Grub are updated with latest patch and all are signed with private key to prevent unsigned modules.
 
 *******************************************************************************
 ### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB)?
 *******************************************************************************
-[No]
+No
 
 *******************************************************************************
 ### What kernel are you using? Which patches does it includes to enforce Secure Boot?
 *******************************************************************************
-[Kernel Version is 5.10, it included enforce secure boot.]
+Kernel Version is 5.10, it included enforce secure boot.
 
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim.
 *******************************************************************************
-[N/A]
+N/A
