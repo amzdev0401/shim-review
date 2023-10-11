@@ -161,6 +161,12 @@ This is the first time SHIM submission, We are going to use GRUB 2.11 for upcomi
 No additional local patches applied in signed kernel
 
 *******************************************************************************
+### Do you use an ephemeral key for signing kernel modules?
+### If not, please describe how you ensure that one kernel build does not load modules built for another kernel.
+*******************************************************************************
+Yes, Ephemeral key is used for signing kernel modules.
+
+*******************************************************************************
 ### If you use vendor_db functionality of providing multiple certificates and/or hashes please briefly describe your certificate setup.
 ### If there are allow-listed hashes please provide exact binaries for which hashes are created via file sharing service, available in public with anonymous access for verification.
 *******************************************************************************
