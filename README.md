@@ -196,7 +196,7 @@ This is first time submission.
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-ce63ec2309bd02048a3563a0c8acb5bdc9c302de4f9b7a74c9ffd01737c018bc shimx64.efi
+0a3a19af7762d418bb325a2b6a08f22f9b6488435f61e3f67f7bd85ed9d0ff3b shimx64.efi
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
