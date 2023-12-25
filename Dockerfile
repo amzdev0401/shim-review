@@ -15,7 +15,6 @@ WORKDIR /opt/shim-15.7
 
 # Copy patch and other binaries to docker
 COPY *.patch /opt/shim-15.7/
-RUN git apply 530.patch
 RUN git apply 535.patch
 COPY sbat.amzetta.csv /opt/shim-15.7/data
 COPY amzetta.der /opt/shim-15.7/

@@ -77,8 +77,7 @@ SHIM Created from [https://github.com/rhboot/shim/releases/download/15.7/shim-15
 
 Following patches are applied.
 
-1. Enable the NX compatibility flag by default. #530 (530.patch)
-2. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)
+1. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)
 
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
@@ -88,8 +87,7 @@ Following patches are applied.
 *******************************************************************************
 ### What patches are being applied and why:
 *******************************************************************************
-1. Enable the NX compatibility flag by default. #530 (530.patch)
-2. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)
+1. Make sbat_var.S parse right with buggy gcc/binutils #535 (535.patch)
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
