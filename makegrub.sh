@@ -6,7 +6,7 @@
 # step 2 : cd grub2
 # step 3 : create sbat.csv
 #          sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md 
-#          grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/ 
+#          grub,4,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/ 
 #          grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 # step 4 : run build script ./makegrub.sh
 

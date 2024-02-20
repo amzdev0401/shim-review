@@ -154,7 +154,7 @@ Yes, as you can see
 
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
+grub,4,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
 grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 ```
 *******************************************************************************
@@ -217,7 +217,7 @@ This is first time submission.
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-0a3a19af7762d418bb325a2b6a08f22f9b6488435f61e3f67f7bd85ed9d0ff3b shimx64.efi
+a5e223647b0ba12cf8e6947de6b253dd5fba7f1f7c0356f55c387d7e64e5440a  shimx64.efi
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -250,7 +250,7 @@ GRUB:
 
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
+grub,4,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
 grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
 ```
 *******************************************************************************
