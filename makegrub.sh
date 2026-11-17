@@ -7,11 +7,14 @@
 #
 # Targeted security fixes:
 #   CVE-2023-4693
+#   CVE-2025-0624
 #   CVE-2024-45774
 #   CVE-2024-45776
 #   CVE-2024-45777
 #   CVE-2024-45783
 #   CVE-2025-0624
+#   CVE-2024-45775
+#   CVE-2025-1118
 #
 # Run this script from its parent directory.
 # GRUB source will be cloned into ./grub2.
@@ -39,13 +42,15 @@ GFLD="$GRUB_SRC/output"
 # Resolve them to full commit hashes after fetching origin/master.
 
 SECURITY_PATCHES=(
-    "0ed2458cc4eff6d9a9199527e2a0b6d445802f94" # CVE-2023-4693
-    "ea703528a"                                # grub_strlcpy prerequisite
+    "0ed2458cc4eff6d9a9199527e2a0b6d445802f94" # CVE-2023-4693  NTFS OOB read
+    "ea703528a"                                # CVE-2025-0624  grub_strlcpy prerequisite
     "2c34af908"                                # CVE-2024-45774 JPEG
     "09bd6eb58"                                # CVE-2024-45776 gettext
     "b970a5ed9"                                # CVE-2024-45777 gettext
     "f7c070a2e"                                # CVE-2024-45783 HFS+
-    "5eef88152"                                # CVE-2025-0624 network
+    "5eef88152"                                # CVE-2025-0624  network
+    "05be856a8c3aae41f5df90cab7796ab7ee34b872" # CVE-2024-45775 extcmd
+    "34824806ac6302f91e8cabaa41308eaced25725f" # CVE-2025-1118  minicmd lockdown
 )
 
 # --------------------------------------------------
