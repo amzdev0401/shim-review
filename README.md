@@ -257,6 +257,12 @@ https://github.com/rhboot/grub2/commit/f7c070a2e
 CVE-2025-0624 – Network
 https://github.com/rhboot/grub2/commit/5eef88152
 
+CVE-2024-45775 - extcmd
+https://github.com/rhboot/grub2/commit/05be856a8c3aae41f5df90cab7796ab7ee34b872
+
+CVE-2025-1118 - minicmd lockdown
+https://github.com/rhboot/grub2/commit/34824806ac6302f91e8cabaa41308eaced25725f
+
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 5?
 Skip this, if you're not using GRUB2, otherwise do you have an entry in your GRUB2 binary similar to:  
