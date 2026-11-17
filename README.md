@@ -312,7 +312,7 @@ We have reused the same CA certificate. shim 15.8 was signed by Microsoft but wa
 
 *******************************************************************************
 ### Is the Dockerfile in your repository the recipe for reproducing the building of your shim binary?
-A reviewer should always be able to run `docker build .` to get the exact binary you attached in your application.
+A reviewer should always be able to run `make-shim.sh` to get the exact binary you attached in your application.
 
 Hint: Prefer using *frozen* packages for your toolchain, since an update to GCC, binutils, gnu-efi may result in building a shim binary with a different checksum.
 
@@ -324,7 +324,7 @@ Ubuntu 22.04 LTS, or above with Docker, run make-shim.sh
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-`https://github.com/amzdev0401/shim-review/blob/AmZetta-shim-x86_64-20261106/build.log` contains all build log.
+https://github.com/amzdev0401/shim-review/blob/AmZetta-shim-x86_64-20261106/build.log contains all build log.
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
