@@ -233,7 +233,29 @@ Downstream RHEL/Fedora/Debian/Canonical-like implementation
   * CVE-2025-1118
   * CVE-2025-1125
 *******************************************************************************
-GRUB 2.11 with cherry picked from commit 65bc45963014773e2062ccc63ff34a089d2e352e for upcoming product line.
+GRUB 2.11 with cherry picked from commit 65bc45963014773e2062ccc63ff34a089d2e352e 
+With following patches were applied.
+
+CVE-2023-4693 – NTFS OOB read
+https://github.com/rhboot/grub2/commit/0ed2458cc4eff6d9a9199527e2a0b6d445802f94
+
+CVE-2025-0624 Prerequisite – grub_strlcpy
+https://github.com/rhboot/grub2/commit/ea703528a
+
+CVE-2024-45774 – JPEG
+https://github.com/rhboot/grub2/commit/2c34af908
+
+CVE-2024-45776 – gettext
+https://github.com/rhboot/grub2/commit/09bd6eb58
+
+CVE-2024-45777 – gettext
+https://github.com/rhboot/grub2/commit/b970a5ed9
+
+CVE-2024-45783 – HFS+
+https://github.com/rhboot/grub2/commit/f7c070a2e
+
+CVE-2025-0624 – Network
+https://github.com/rhboot/grub2/commit/5eef88152
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 5?
