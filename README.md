@@ -245,7 +245,7 @@ Yes, as you can see
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,5,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
-grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
+grub.amzetta,1,AmZetta Technologies,grub2,2.11-security,https://amzetta.com/
 ```
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
@@ -401,7 +401,7 @@ GRUB:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,5,Free Software Foundation,grub,2.11,https://www.gnu.org/software/grub/
-grub.amzetta,1,AmZetta Technologies,grub2,2.11-65bc45963,https://amzetta.com/
+grub.amzetta,1,AmZetta Technologies,grub2,2.11-security,https://amzetta.com/
 ```
 
 *******************************************************************************
